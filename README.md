@@ -1,4 +1,5 @@
 # Opa, eu sou deon 👋
+## i use fedora linux btw 
 
 ![Profile Views](https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%23263759)
 
@@ -40,10 +41,5 @@
 ## 📊 Estatísticas
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=adeondev&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adeondev&layout=compact&langs_count=7&theme=dracula"/>
-</div>
-<br>
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=adeondev&theme=dracula" alt="GitHub Streak" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adeondev&theme=dracula&hide_border=true&bg_color=282a36" alt="Gráfico de Contribuições" />
 </div>
