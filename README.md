@@ -7,6 +7,8 @@
 
 ## 🚀 Sobre mim
 - 🔭 Trabalhando no **[Fyscat](https://github.com/adeondev/Gazin-Geral)**
+- 🔨 Desenvolvedor do **[Fiscal Gazin]([https://github.com/adeondev/Gazin-Geral](https://github.com/sergioizidoro277/FECHAMENTO-FISCAL))**
+- 🪐 Dono do **[Pryzen]([https://pryzen.space))**
 - 📫 Email: **deonsim24@gmail.com**
 
 ---
@@ -25,7 +27,7 @@
   <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
 </div>
 
-### ⏳ O que estou aprendendo:
+### ⏳ Estou aprendendo:
 <div>
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
 </div>
