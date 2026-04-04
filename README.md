@@ -8,7 +8,7 @@
 ## 🚀 Sobre mim
 - 🔭 Trabalhando no **[Fyscat](https://github.com/adeondev/Gazin-Geral)**
 - 🔨 Desenvolvedor do **[Fiscal Gazin](https://github.com/adeondev/Gazin-Geral](https://github.com/sergioizidoro277/FECHAMENTO-FISCAL))**
-- 🪐 Dono do **[Pryzen](https://pryzen.space))**
+- 🪐 Dono do **[Pryzen](https://pryzen.space)**
 - 📫 Email: **deonsim24@gmail.com**
 
 ---
