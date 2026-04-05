@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eusoudeon ↔ portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&family=Manrope:wght@300;500;700&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header pre-load">
+        <div class="header-container">
+            <div class="header-left">
+                <span class="brand" data-i18n="brand">eusoudeon</span>
+                <img src="images/adeondevlogo.svg" alt="" class="header-logo">
+                <div class="lang-selector">
+                    <button class="lang-current" id="lang-btn">
+                        <img id="current-flag" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="BR">
+                        <span class="lang-arrow">⌄</span>
+                    </button>
+                    <ul class="lang-dropdown" id="lang-menu">
+                        <!-- Gerado dinamicamente no script.js -->
+                    </ul>
+                </div>
+            </div>
+            <nav class="header-right">
+                <a href="#top"><img src="images/icons/inicio.svg" alt="Início" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_start">Início</span></a>
+                <a href="#about"><img src="images/icons/sobre%20mim.svg" alt="Sobre" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_about">Sobre</span></a>
+                <a href="#tools"><img src="images/icons/ferramentas.svg" alt="Ferramentas" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_tools">Ferramentas</span></a>
+                <a href="#achievements"><img src="images/icons/conquistas.svg" alt="Conquistas" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_achievements">Conquistas</span></a>
+                <a href="#projects"><img src="images/icons/projetos.svg" alt="Projetos" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_projects">Projetos</span></a>
+                <a href="#musics"><img src="images/icons/musicas.svg" alt="Músicas" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_musics">Músicas</span></a>
+                <a href="#horizontal-story"><img src="images/icons/gostos%20pessoas.svg" alt="Gostos Pessoais"
+                        class="nav-icon"><span class="header-tooltip" data-i18n="nav_personality">Personalidade</span></a>
+                <a href="#contact"><img src="images/icons/contato.svg" alt="Contato" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_contact">Contato</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="presentation" id="top">
+        <div class="presentation-text">
+            <h1 id="typewriter"></h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Um "developer" que diz fazer coisas, mas na verdade não faz nada.</p>
+
+            <div class="hero-footer">
+                <div class="hero-btns">
+                    <a href="#about" class="btn-hero btn-filled" data-i18n="btn_about">sobre mim</a>
+                    <a href="#contact" class="btn-hero btn-outline" data-i18n="btn_contact">contato</a>
+                </div>
+                <p class="quote"><span data-i18n="quote_hero">"Eu só comecei cedo demais e não tem volta"</span><br><span>- Deon</span></p>
+            </div>
+        </div>
+        <div class="photo-container">
+            <div class="pfp-wrapper">
+                <svg class="pfp-border" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48"></circle>
+                </svg>
+                <img src="images/pfp.jpg" alt="Foto do Deon" class="profile-photo">
+            </div>
+        </div>
+    </div>
+
+    <div id="scroll-indicator">
+        <span data-i18n="scroll_indicator">Desça para ver mais informações</span>
+        <img src="images/icons/scroll.svg" alt="" class="scroll-icon">
+    </div>
+
+    <section id="about" class="section-about">
+        <div class="container-about">
+            <h2 class="section-title" data-i18n="about_title">Sobre Mim</h2>
+
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <p data-i18n="about_p1">Desde que me entendo por gente, a tecnologia faz parte da minha vida. Comecei minha jornada há
+                        cerca de 6 anos, aprendendo LuaU, e desde então venho evoluindo constantemente, sempre em busca
+                        de novos conhecimentos e ferramentas que me destaquem no mercado.</p>
+                    <p data-i18n="about_p2">Hoje, não me limito a apenas front-end ou back-end. Tenho uma visão mais ampla do
+                        desenvolvimento, embora ainda não me considere um fullstack. Estou em constante evolução,
+                        aprimorando minhas habilidades passo a passo, com um objetivo claro: me tornar um Game
+                        Developer, um sonho que carrego desde a infância.</p>
+
+                    <blockquote class="quote-linus">
+                        <p>“Talk is cheap. Show me the code.”</p>
+                        <span>— Linus Torvalds</span>
+                    </blockquote>
+
+                    <p class="practical-note"><i data-i18n="about_practical">(E é exatamente isso que eu tento fazer todos os dias: aprender,
+                            construir e provar na prática.)</i></p>
+
+                    <p data-i18n="about_p3">No futuro, pretendo aprofundar meus conhecimentos em C++, Rust e Java, buscando não apenas
+                        domínio técnico, mas também uma base sólida para desenvolver aplicações mais performáticas,
+                        seguras e escaláveis, especialmente no universo de desenvolvimento de jogos.</p>
+                </div>
+
+                <div class="about-cards">
+                    <div class="card-info">
+                        <h3 data-i18n="card_obj_t">Objetivo</h3>
+                        <p data-i18n="card_obj_d">Crescer na área de tecnologia e me tornar um desenvolvedor cada vez mais completo, com foco
+                            futuro em Game Development.</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="card_focus_t">Foco atual</h3>
+                        <p data-i18n="card_focus_d">Aprimorando minhas habilidades tanto no front-end quanto no back-end, buscando uma visão mais
+                            ampla do desenvolvimento.</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="card_steps_t">Próximos passos</h3>
+                        <p data-i18n="card_steps_d">Aprofundar meus conhecimentos em C++, Rust e Java, buscando aplicações mais performáticas,
+                            seguras e escaláveis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="section-tools">
+        <div class="container-tools">
+            <h2 class="tools-title" data-i18n="tools_title">Ferramentas e Software</h2>
+
+            <div class="tools-selector">
+                <button class="tab-btn active" data-tab="software" data-i18n="tab_software">Software</button>
+                <button class="tab-btn" data-tab="ferramentas-tab" data-i18n="tab_tools">Ferramentas</button>
+                <button class="tab-btn" data-tab="linguagens" data-i18n="tab_languages">Linguagens</button>
+            </div>
+
+            <div class="tools-nav-wrapper">
+                <button class="nav-arrow prev" id="prevTab" aria-label="Aba anterior">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="tools-content">
+                    <div class="tools-wrapper">
+
+                        <div class="tab-content active" id="software">
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_home">// Em casa</h4>
+                                <div class="software-grid">
+                                    <a href="https://www.kernel.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"
+                                                alt="Linux">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label" data-i18n="lbl_kernel">Kernel</span>
+                                            <span class="software-name">Linux</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://fedoraproject.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Fedora_icon_%282021%29.svg"
+                                                alt="Fedora">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label" data-i18n="lbl_os">Sistema Operacional</span>
+                                            <span class="software-name">Fedora OS</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://linuxmint.com/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Linux_Mint_logo_without_wordmark.svg"
+                                                alt="Linux Mint">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label" data-i18n="lbl_os">Sistema Operacional</span>
+                                            <span class="software-name">Linux Mint</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_office">// No escritório</h4>
+                                <div class="software-grid">
+                                    <a href="https://www.microsoft.com/windows" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg"
+                                                alt="Windows 10">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label" data-i18n="lbl_os_gazin">Sistema na Gazin</span>
+                                            <span class="software-name">Windows 10</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.microsoft.com/windows" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/windows-color-icon.png"
+                                                alt="Windows 11">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label" data-i18n="lbl_os_gazin">Sistema na Gazin</span>
+                                            <span class="software-name">Windows 11</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="ferramentas-tab">
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_code">// Código</h4>
+                                <div class="software-grid">
+                                    <a href="https://code.visualstudio.com/" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                                                alt="VS Code">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">&lt; code.editor /&gt;</span>
+                                            <span class="software-name">Visual Studio Code</span>
+                                        </div>
+                                    </a>
+                                    <div class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/antigravity-color.png"
+                                                alt="Antigravity">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">/* ai assistant */</span>
+                                            <span class="software-name">Antigravity</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.jetbrains.com/idea/" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
+                                                alt="IntelliJ IDEA">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">[ java.ide ]</span>
+                                            <span class="software-name">IntelliJ IDEA</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://github.com/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon" style="gap: 10px; display: flex;">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                                                alt="GitHub" style="width: 50%;">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg"
+                                                alt="Git" style="width: 50%;">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">git commit -m "push"</span>
+                                            <span class="software-name">GitHub &amp; Git</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_design">// Design</h4>
+                                <div class="software-grid">
+                                    <a href="https://www.figma.com/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+                                                alt="Figma">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">.ui-ux { design: true; }</span>
+                                            <span class="software-name">Figma</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.adobe.com/products/illustrator.html" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
+                                                alt="Adobe Illustrator">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">svg =&gt; vector</span>
+                                            <span class="software-name">Adobe Illustrator</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.adobe.com/products/photoshop.html" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                                                alt="Photoshop">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">#image.editor</span>
+                                            <span class="software-name">Photoshop 2024</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.gimp.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg"
+                                                alt="GIMP">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">openSource(img);</span>
+                                            <span class="software-name">GIMP</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_others">// Outros</h4>
+                                <div class="software-grid">
+                                    <a href="https://scratch.mit.edu/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Scratchlogo.svg"
+                                                alt="Scratch">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-label">require('blocks');</span>
+                                            <span class="software-name">Scratch</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="linguagens">
+
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_learned">// Linguagens que sei</h4>
+                                <div class="software-grid">
+                                    <a href="https://www.lua.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg"
+                                                alt="Lua">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">Lua</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://luau-lang.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Luau_Logo_%28Programming_Language%29.svg"
+                                                alt="Luau">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">Luau</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://cdn.iconscout.com/icon/free/png-512/free-html-5-icon-svg-download-png-1175208.png?f=webp&w=256"
+                                                alt="HTML">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">HTML</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+                                                alt="CSS">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">CSS</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon js-rounded">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                                                alt="JavaScript">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">JavaScript</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://react.dev/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/React_Logo_SVG.svg"
+                                                alt="React">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">React</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.php.net/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+                                                alt="PHP">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">PHP</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.python.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                                alt="Python">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">Python</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg"
+                                                alt="SQL">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">SQL</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_learning">// Estou aprendendo</h4>
+                                <div class="software-grid">
+                                    <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank"
+                                        style="text-decoration: none;" class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg"
+                                                alt="C#">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">C#</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://isocpp.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                                                alt="C++">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">C++</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tools-category">
+                                <h4 class="category-title" data-i18n="cat_want_learn">// Quero aprender</h4>
+                                <div class="software-grid">
+                                    <a href="https://www.rust-lang.org/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Original_Ferris.svg"
+                                                alt="Rust">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">Rust</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.java.com/" target="_blank" style="text-decoration: none;"
+                                        class="software-item">
+                                        <div class="software-icon">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png"
+                                                alt="Java">
+                                        </div>
+                                        <div class="software-info">
+                                            <span class="software-name">Java</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-arrow next" id="nextTab" aria-label="Próxima aba">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="section-achievements section-about">
+        <div class="container-about">
+            <h2 class="section-title" data-i18n="ach_title">Conquistas</h2>
+            <div class="about-text-content intro-achievements">
+                <div class="bicamp-container">
+                    <img src="images/bicamp.svg" alt="Bicampeão do Agrinho" class="logo-bicampeao">
+                </div>
+                <p data-i18n="ach_intro">Durante os anos de 2024 e 2025, participei do Concurso Agrinho, promovido pelo Sistema FAEP/SENAR-PR,
+                    conquistando destaque em nível estadual. Participando pelos colégios Civicos do Paraná.</p>
+            </div>
+            <div class="achievements-display">
+                <img src="images/agrinho.png" alt="Conquista Agrinho" class="agrinho-img">
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <img src="images/icons/medalha_segundo.svg" alt="Medalha Segundo Lugar" class="timeline-medal">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="timeline-title" data-i18n="ach_2024_t">2º Lugar no Paraná</h3>
+                        <p data-i18n="ach_2024_d">Participei do Concurso Agrinho (Sistema FAEP/SENAR-PR), alcançando a 2ª colocação geral no
+                            estado do Paraná na categoria de programação com Scratch.</p>
+                        <a href="https://scratch.mit.edu/projects/1005715087/" target="_blank" class="btn-jogar">
+                            <span data-i18n="btn_play">Jogar Agora</span>
+                            <img src="images/icons/redirect.svg" alt="Redirect" class="btn-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <img src="images/icons/medalha_dez.svg" alt="Medalha Top 10" class="timeline-medal">
+                        <span class="timeline-year">2025</span>
+                        <h3 class="timeline-title" data-i18n="ach_2025_t">Top 10 & Bicampeonato</h3>
+                        <p data-i18n="ach_2025_d">Mantive o alto desempenho e novamente me destaquei entre os 10 melhores do estado, garantindo
+                            meu bicampeonato na competição Agrinho.</p>
+                        <a href="https://scratch.mit.edu/projects/1168676248/" target="_blank" class="btn-jogar">
+                            <span data-i18n="btn_play">Jogar Agora</span>
+                            <img src="images/icons/redirect.svg" alt="Redirect" class="btn-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <p class="practical-note timeline-footer"><i data-i18n="ach_footer">Refletindo minha melhora na área de tecnologia.</i></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-projects section-about">
+        <div class="container-about">
+            <h2 class="section-title" data-i18n="projects_title">Projetos</h2>
+            <div class="about-text-content" style="position: relative;">
+                <p data-i18n="projects_intro">Ao longo da minha vida, fiz alguns projetos e aqui estão, dê uma olhada e tome sua opinião!</p>
+                <div class="projects-deco-bracket"></div>
+            </div>
+            <div class="projects-container">
+                <aside class="projects-sidebar">
+                    <div class="project-active-bg"></div>
+                    <button class="project-tab active" data-proj="web">
+                        <img src="images/icons/web.svg" alt="" class="project-icon">
+                        <span data-i18n="proj_tab_web">Web</span>
+                    </button>
+                    <button class="project-tab" data-proj="roblox">
+                        <img src="images/icons/roblox.svg" alt="" class="project-icon">
+                        <span data-i18n="proj_tab_roblox">Roblox</span>
+                    </button>
+                    <button class="project-tab" data-proj="scratch">
+                        <img src="images/icons/scratch.svg" alt="" class="project-icon">
+                        <span data-i18n="proj_tab_scratch">Scratch</span>
+                    </button>
+                    <button class="project-tab" data-proj="tutorials">
+                        <img src="images/icons/tutorials.svg" alt="" class="project-icon">
+                        <span data-i18n="proj_tab_tutorials">Tutoriais</span>
+                    </button>
+                </aside>
+
+                <main class="projects-display">
+                    <div id="project-category-title" class="project-category-title">Web</div>
+                    <div id="project-grid" class="project-grid"></div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <section id="musics" class="section-musics section-about">
+
+        <div id="music-particles" class="particles-container"></div>
+
+        <div class="container-about">
+            <h2 class="section-title" data-i18n="musics_title">Músicas</h2>
+            <div class="about-text-content">
+                <p data-i18n="musics_intro">Artistas e músicas que eu não paro de ouvir:</p>
+            </div>
+
+            <div class="musics-container">
+                <nav class="musics-nav tools-selector">
+                    <button class="music-tab tab-btn active" data-musica="artists" data-i18n="music_tab_artists">Artistas Favoritos</button>
+                    <button class="music-tab tab-btn" data-musica="songs" data-i18n="music_tab_songs">Músicas Favoritas</button>
+                </nav>
+
+                <main class="musics-display">
+                    <div id="music-grid" class="music-grid"></div>
+                </main>
+            </div>
+        </div>
+
+        <div class="vinyl-wrapper">
+            <div class="vinyl-container">
+                <div class="shine-overlay"></div>
+                <div class="spinning-part">
+                    <svg class="vinyl-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#0d0d0d" />
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="#1a1a1a" stroke-width="0.5" />
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#1f1f1f" stroke-width="1.5" />
+                        <circle cx="50" cy="50" r="41" fill="none" stroke="#1a1a1a" stroke-width="0.5" />
+                        <circle cx="50" cy="50" r="37" fill="none" stroke="#222" stroke-width="1" />
+                        <circle cx="50" cy="50" r="32" fill="none" stroke="#1a1a1a" stroke-width="0.5" />
+                        <circle cx="50" cy="50" r="28" fill="none" stroke="#1f1f1f" stroke-width="1" />
+                        <circle cx="50" cy="50" r="24" fill="none" stroke="#1a1a1a" stroke-width="0.5" />
+                        <circle cx="50" cy="50" r="21" fill="none" stroke="#222" stroke-width="0.8" />
+                        <circle cx="50" cy="50" r="17" fill="#111" />
+                    </svg>
+                    <img src="https://cdn-images.dzcdn.net/images/artist/0eca5dd5f8ac336e55bf390da9ce13d0/1900x1900-000000-80-0-0.jpg"
+                        alt="Artista" class="artist-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horizontal-story" class="section-horizontal">
+        <div class="h-story-sticky">
+            <div class="h-story-header">
+                <h2 class="section-title" data-i18n="story_title">Gostos Pessoais</h2>
+            </div>
+
+            <div class="h-story-track">
+
+                <div class="h-story-panel panel-1">
+                    <div class="h-panel-content">
+                        <div class="h-panel-text">
+                            <span class="h-panel-tag" data-i18n="story_1_tag">// 01. Automobilismo</span>
+                            <h2 class="h-panel-title" data-i18n="story_1_title">Formula 1</h2>
+                            <p class="h-panel-desc" data-i18n="story_1_desc">Comecei a acompanhar Formula 1 e automobilismo como um todo no final
+                                de 2024, e logo de cara me apaixonei pelo esporte. Hoje, torço pela <span
+                                    class="red-bull-text"><span class="rb-red">Red</span> <span
+                                        class="rb-blue">Bull</span></span>, mas mais ainda... Eu torço pelo caos na
+                                pista!</p>
+                            <blockquote class="h-panel-quote">
+                                “Não amigos, eu não comecei vendo Drive to Survive. Na verdade, eu nunca nem vi.”
+                            </blockquote>
+                        </div>
+                        <div class="h-panel-media">
+                            <img src="images/story/origins.png" alt="Origens">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-story-panel panel-2 reverse">
+                    <div class="h-panel-content">
+                        <div class="h-panel-text">
+                            <span class="h-panel-tag" data-i18n="story_2_tag">// 02. astronomia</span>
+                            <h2 class="h-panel-title" data-i18n="story_2_title">O Universo</h2>
+                            <p class="h-panel-desc" data-i18n="story_2_desc">Quando eu era criança, eu queria ser astrônomo. Bom, isso já diz
+                                algo, não diz? E sim, até hoje sou fissurado e tenho paixão pela astronomia. Acompanho
+                                lançamentos, vejo notícias e até conferências da NASA de vez em quando eu vejo. Meu amor
+                                por astronomia nunca morreu.</p>
+                        </div>
+                        <div class="h-panel-media">
+                            <img src="images/story/learning.png" alt="Evolução">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-story-panel panel-3">
+                    <div class="h-panel-content">
+                        <div class="h-panel-text">
+                            <span class="h-panel-tag" data-i18n="story_3_tag">// 03. programação</span>
+                            <h2 class="h-panel-title" data-i18n="story_3_title">Códigos</h2>
+                            <p class="h-panel-desc">
+                            <p class="h-panel-desc" data-i18n="story_3_desc">E chegamos nela! A programação, bom, você deve ter visto em toda
+                                parte que... Eu gosto de programar, não é? Acho que isso ficou meio óbvio vendo o site.
+                                Não tem muito o que falar, mas é um gosto. :D</p>
+                            </p>
+                        </div>
+                        <div class="h-panel-media">
+                            <img src="images/story/vision.png" alt="Visão">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-story-progress">
+                <div class="h-progress-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-contact section-about section-projects">
+        <div class="container-about">
+            <h2 class="section-title" data-i18n="contact_title">Contato</h2>
+            <div class="about-text-content">
+                <p data-i18n="contact_intro">Gostou do meu trabalho ou quer trocar uma ideia? Me chama em qualquer uma das plataformas abaixo!</p>
+            </div>
+
+            <div class="contact-row">
+
+                <a href="https://github.com/adeondev" target="_blank" class="contact-icon-link">
+                    <img src="https://cdn.simpleicons.org/github/fdb82c" alt="GitHub" class="contact-icon-img">
+                    <span class="contact-tooltip">/adeondev</span>
+                </a>
+
+                <a href="mailto:deonsim24@gmail.com" class="contact-icon-link">
+                    <img src="https://cdn.simpleicons.org/gmail/fdb82c" alt="Email" class="contact-icon-img">
+                    <span class="contact-tooltip">deonsim24@gmail.com</span>
+                </a>
+
+                <div class="contact-icon-link discord-copy" data-copy="@uhhdeon">
+                    <img src="https://cdn.simpleicons.org/discord/fdb82c" alt="Discord" class="contact-icon-img">
+                    <span class="contact-tooltip">@uhhdeon</span>
+                </div>
+
+                <a href="https://www.instagram.com/uhhdeon/" target="_blank" class="contact-icon-link">
+                    <img src="https://cdn.simpleicons.org/instagram/fdb82c" alt="Instagram" class="contact-icon-img">
+                    <span class="contact-tooltip">uhhdeon</span>
+                </a>
+
+                <a href="mailto:deonsim24@gmail.com" class="contact-icon-link">
+                    <img src="https://www.svgrepo.com/show/333577/microsoft-teams.svg" alt="Teams"
+                        class="contact-icon-img teams-icon">
+                    <span class="contact-tooltip">deonsim24@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="project-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-desc"></p>
+                    <div id="modal-links" class="project-links"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
