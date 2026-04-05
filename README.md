@@ -2,6 +2,9 @@
 ## i use fedora linux btw 
 
 ![Profile Views](https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%23263759)
+<br>
+
+[![Abrir Portfolio](https://img.shields.io/badge/Abrir%20Portfolio-000000?style=for-the-badge&logo=googledomains&logoColor=white)](https://adeondev.github.io/adeondev/)
 
 ---
 

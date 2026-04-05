@@ -10,18 +10,18 @@ class I18nManager {
         try {
             const response = await fetch('i18n.json');
             this.data = await response.json();
-            
+
             this.buildSelector();
             this.updateCurrentFlag();
             this.updateDOM();
-            
+
             document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
-            
+
             // Inicializar o restante do site agora que as traduções estão prontas
             if (typeof restartTypewriter === 'function') restartTypewriter();
             if (typeof loadProjects === 'function') loadProjects();
             if (typeof loadMusics === 'function') loadMusics();
-            
+
             const langBtn = document.getElementById('lang-btn');
             const langSelector = document.querySelector('.lang-selector');
 
@@ -65,10 +65,10 @@ class I18nManager {
         this.currentLang = lang;
         localStorage.setItem('site-lang', lang);
         document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-        
+
         this.updateCurrentFlag();
         this.updateDOM();
-        
+
         if (typeof restartTypewriter === 'function') restartTypewriter();
         if (typeof loadProjects === 'function') loadProjects(currentCategory);
         if (typeof renderWithTransitionMusic === 'function') renderWithTransitionMusic(currentMusicCategory);
@@ -107,7 +107,7 @@ const i18n = new I18nManager();
 let targetY = window.scrollY;
 let currentY = window.scrollY;
 const smoothness = 0.08;
-let isScriptScrolling = false; 
+let isScriptScrolling = false;
 let wheelTimer;
 
 document.addEventListener('wheel', function (event) {
@@ -152,6 +152,12 @@ function updateHorizontalStory() {
     const track = document.querySelector('.h-story-track');
     if (!section || !track) return;
 
+    // Disable horizontal scroll logic on mobile
+    if (window.innerWidth <= 900) {
+        track.style.transform = '';
+        return;
+    }
+
     const start = section.offsetTop;
     const scrollRange = section.offsetHeight - window.innerHeight;
 
@@ -176,7 +182,7 @@ function updateHorizontalStory() {
         targetSnapX = 200;
     }
 
-    const hSmoothness = 0.1; 
+    const hSmoothness = 0.1;
     hScrollCurrentX += (targetSnapX - hScrollCurrentX) * hSmoothness;
 
     if (Math.abs(targetSnapX - hScrollCurrentX) < 0.01) {
@@ -257,7 +263,7 @@ window.addEventListener('resize', initMatrix);
 initMatrix();
 
 const chars = '01{}[]()<>+-*="/\\$#~!?&ABCDFXYZ'.split('');
-const fontSize = 20; 
+const fontSize = 20;
 let columns = Math.floor(matrixCanvas.width / fontSize);
 let drops = [];
 
@@ -275,17 +281,17 @@ const attractors = [];
 function updateAttractors() {
 
     const selectors = [
-        '.presentation-text', 
+        '.presentation-text',
         '.profile-photo',
-        '.section-title', 
-        '.projeto-card', 
-        '.software-item', 
-        '.conquista-card', 
-        '.musica-card', 
-        '.h-panel-content', 
+        '.section-title',
+        '.projeto-card',
+        '.software-item',
+        '.conquista-card',
+        '.musica-card',
+        '.h-panel-content',
         '.contact-row'
     ];
-    attractors.length = 0; 
+    attractors.length = 0;
     selectors.forEach(sel => {
         const elements = document.querySelectorAll(sel);
         elements.forEach(el => {
@@ -327,7 +333,7 @@ function drawMatrix() {
         const dy = mouseY - charY;
         const mouseDistance = Math.sqrt(dx * dx + dy * dy);
 
-        let alpha = 0.05; 
+        let alpha = 0.05;
 
         if (mouseDistance < 200) {
             alpha = Math.max(alpha, Math.min(0.12, 0.02 + (200 - mouseDistance) / 1500));
@@ -389,7 +395,7 @@ function handleActiveNav() {
 
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        const scrollPosition = window.scrollY + 150; 
+        const scrollPosition = window.scrollY + 150;
 
         if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
             currentSection = selector;
@@ -414,7 +420,7 @@ revealElements.forEach(id => {
 });
 
 window.addEventListener('scroll', handleActiveNav);
-handleActiveNav(); 
+handleActiveNav();
 
 const typewriterElement = document.getElementById('typewriter');
 let k = 0;
@@ -426,7 +432,7 @@ function restartTypewriter() {
     typewriterElement.textContent = "";
     k = 0;
     const fullText = i18n.t('typewriter');
-    
+
     function type() {
         if (k < fullText.length) {
             const char = fullText.charAt(k);
@@ -434,8 +440,8 @@ function restartTypewriter() {
             span.classList.add('letra');
             span.textContent = char;
 
-            const isHi = (i18n.currentLang === 'pt' && k >= 12 && k <= 15) || 
-                         (i18n.currentLang === 'en' && k >= 8 && k <= 11);
+            const isHi = (i18n.currentLang === 'pt' && k >= 12 && k <= 15) ||
+                (i18n.currentLang === 'en' && k >= 8 && k <= 11);
 
             if (isHi) {
                 span.classList.add('highlight');
@@ -534,7 +540,7 @@ setTimeout(updateHeight, 1000);
 
 let projectsData = null;
 let currentCategory = 'web';
-let isProjectsTransitioning = false; 
+let isProjectsTransitioning = false;
 const categoryOrder = ['web', 'roblox', 'scratch', 'tutorials'];
 
 async function loadProjects(activeCategory = 'web') {
@@ -544,9 +550,9 @@ async function loadProjects(activeCategory = 'web') {
             return;
         }
 
-        const response = await fetch('../projects.json');
+        const response = await fetch('projects.json');
         projectsData = await response.json();
-        renderWithTransition(activeCategory); 
+        renderWithTransition(activeCategory);
     } catch (error) {
         console.error('Error loading projects:', error);
     }
@@ -558,7 +564,7 @@ function renderWithTransition(newCategory) {
     const sidebar = document.querySelector('.projects-sidebar');
     const titleElement = document.getElementById('project-category-title');
 
-    if (!display || isProjectsTransitioning) return; 
+    if (!display || isProjectsTransitioning) return;
 
     const currentIndex = categoryOrder.indexOf(currentCategory);
     const newIndex = categoryOrder.indexOf(newCategory);
@@ -566,8 +572,8 @@ function renderWithTransition(newCategory) {
     // Removido o retorno antecipado para permitir re-renderização ao mudar de idioma
     // if (currentIndex === newIndex && oldGrid && oldGrid.innerHTML !== '') return;
 
-    isProjectsTransitioning = true; 
-    if (sidebar) sidebar.classList.add('is-loading'); 
+    isProjectsTransitioning = true;
+    if (sidebar) sidebar.classList.add('is-loading');
 
     if (titleElement) {
         titleElement.textContent = i18n.t(`proj_tab_${newCategory}`) || newCategory;
@@ -599,7 +605,7 @@ function renderWithTransition(newCategory) {
         newGrid.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
 
         display.appendChild(newGrid);
-        newGrid.offsetHeight; 
+        newGrid.offsetHeight;
 
         oldGrid.style.transform = isMovingUp ? 'translateY(-100px)' : 'translateY(100px)';
         oldGrid.style.opacity = '0';
@@ -608,22 +614,22 @@ function renderWithTransition(newCategory) {
         newGrid.style.opacity = '1';
 
         setTimeout(() => {
-            if(oldGrid.parentNode) oldGrid.parentNode.removeChild(oldGrid);
+            if (oldGrid.parentNode) oldGrid.parentNode.removeChild(oldGrid);
             newGrid.id = 'project-grid';
             newGrid.style.transition = '';
             newGrid.style.transform = '';
             newGrid.style.opacity = '';
             display.style.position = '';
 
-            if (sidebar) sidebar.classList.remove('is-loading'); 
-            isProjectsTransitioning = false; 
+            if (sidebar) sidebar.classList.remove('is-loading');
+            isProjectsTransitioning = false;
         }, 300);
 
     } else {
         newGrid.id = 'project-grid';
         display.appendChild(newGrid);
         if (sidebar) sidebar.classList.remove('is-loading');
-        isProjectsTransitioning = false; 
+        isProjectsTransitioning = false;
     }
 
     currentCategory = newCategory;
@@ -751,14 +757,14 @@ function openModal(proj, category = 'web') {
     `;
 
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
     const modal = document.getElementById('project-modal');
     if (modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = ''; 
+        document.body.style.overflow = '';
     }
 }
 
@@ -821,7 +827,7 @@ let isMusicsTransitioning = false;
 async function loadMusics(activeCategory = 'artists') {
     try {
         if (!musicsData) {
-            const response = await fetch('../musics.json');
+            const response = await fetch('musics.json');
             musicsData = await response.json();
         }
         renderWithTransitionMusic(activeCategory);
@@ -871,7 +877,7 @@ function renderWithTransitionMusic(newCategory) {
 
         display.appendChild(newGrid);
 
-        newGrid.offsetHeight; 
+        newGrid.offsetHeight;
 
         oldGrid.style.transform = isMovingForward ? 'translateX(-100%)' : 'translateX(100%)';
         oldGrid.style.opacity = '0';
@@ -880,19 +886,19 @@ function renderWithTransitionMusic(newCategory) {
         newGrid.style.opacity = '1';
 
         setTimeout(() => {
-            if(oldGrid.parentNode) oldGrid.parentNode.removeChild(oldGrid);
+            if (oldGrid.parentNode) oldGrid.parentNode.removeChild(oldGrid);
             newGrid.style.transition = '';
             newGrid.style.transform = '';
             newGrid.style.opacity = '';
             display.style.position = '';
 
             if (nav) nav.style.pointerEvents = 'auto';
-            isMusicsTransitioning = false; 
+            isMusicsTransitioning = false;
         }, 400);
     } else {
         display.appendChild(newGrid);
         if (nav) nav.style.pointerEvents = 'auto';
-        isMusicsTransitioning = false; 
+        isMusicsTransitioning = false;
     }
 
     currentMusicCategory = newCategory;
@@ -1011,7 +1017,7 @@ setTimeout(() => {
 window.addEventListener('resize', updateMusicSelector);
 
 document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
@@ -1029,14 +1035,14 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
     });
 });
 
-(function() {
+(function () {
     const vinyl = document.querySelector('.spinning-part');
     const wrapper = document.querySelector('.vinyl-wrapper');
     if (!vinyl || !wrapper) return;
 
     let isDragging = false;
     let rotation = 0;
-    let velocity = 0.5; 
+    let velocity = 0.5;
     let lastAngle = 0;
     let friction = 0.985;
     let baseSpeed = 0.5;
@@ -1075,7 +1081,7 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
         const now = Date.now();
         const dt = now - lastTime;
         if (dt > 10) {
-            velocity = delta * 0.8; 
+            velocity = delta * 0.8;
         }
 
         lastAngle = currentAngle;
@@ -1118,7 +1124,7 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
     requestAnimationFrame(animate);
 })();
 
-(function() {
+(function () {
     const container = document.getElementById('music-particles');
     if (!container) return;
 
@@ -1158,7 +1164,7 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
     }
 })();
 
-(function() {
+(function () {
     const discordBtn = document.querySelector('.discord-copy');
     if (!discordBtn) return;
 
@@ -1180,6 +1186,44 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
             }, 2000);
         }).catch(err => {
             console.error('Erro ao copiar: ', err);
+        });
+    });
+})();
+
+// Mobile Menu Logic
+(function () {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (!hamburgerBtn || !mobileMenu) return;
+
+    function toggleMenu() {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (mobileMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                isScriptScrolling = true;
+                if (targetId === '#top') {
+                    targetY = 0;
+                } else {
+                    const headerOffset = 75;
+                    targetY = targetElement.offsetTop - headerOffset;
+                }
+            }
         });
     });
 })();

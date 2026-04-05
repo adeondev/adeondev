@@ -1,0 +1,118 @@
+{
+    "artists": [
+        {
+            "name": "Laufey",
+            "image": "images/songs/artists/laufey.png",
+            "link": "https://open.spotify.com/artist/7gW0r5CkdEUMm42w9XpyZO?si=e2ba76cd12f5464d",
+            "genres": {
+                "pt": "jazz pop, traditional pop e elementos clássicos",
+                "en": "jazz pop, traditional pop and classical elements",
+                "es": "jazz pop, pop tradicional y elementos clásicos",
+                "it": "jazz pop, pop tradizionale ed elementi classici"
+            }
+        },
+        {
+            "name": "Tom Jobim",
+            "image": "images/songs/artists/tom jobim.png",
+            "link": "https://open.spotify.com/artist/3pO5VjZ4wOHCMBXOvbMISG?si=jq8svUbQSgWmwnnquvbBAA",
+            "genres": {
+                "pt": "bossa nova, mpb e jazz",
+                "en": "bossa nova, mpb and jazz",
+                "es": "bossa nova, mpb y jazz",
+                "it": "bossa nova, mpb e jazz"
+            }
+        },
+        {
+            "name": "Pullovers",
+            "image": "images/songs/artists/pullovers.png",
+            "link": "https://open.spotify.com/artist/1ZsvMFESteQsWl6wx4GXqE?si=917e0ea02e114447",
+            "genres": {
+                "pt": "rock alternativo e indie rock",
+                "en": "alternative rock and indie rock",
+                "es": "rock alternativo e indie rock",
+                "it": "rock alternativo e indie rock"
+            }
+        },
+        {
+            "name": "Seu Jorge",
+            "image": "images/songs/artists/seu jorge.png",
+            "link": "https://open.spotify.com/artist/0i1s9WcIu0PrUvHzALgofo?si=7af8b1723b2944d2",
+            "genres": {
+                "pt": "mpb, samba, soul e funk rock",
+                "en": "mpb, samba, soul and funk rock",
+                "es": "mpb, samba, soul y funk rock",
+                "it": "mpb, samba, soul e funk rock"
+            }
+        },
+        {
+            "name": "Alec'",
+            "image": "images/songs/artists/alec.png",
+            "link": "https://open.spotify.com/artist/1E0YoYzep0Ou0Pma61XYeD?si=aef06a9939334bc2",
+            "genres": {
+                "pt": "trap, doomshop",
+                "en": "trap, doomshop",
+                "es": "trap, doomshop",
+                "it": "trap, doomshop"
+            }
+        },
+        {
+            "name": "Kakizaki Yuta",
+            "image": "images/songs/artists/kakizaki yuta.png",
+            "link": "https://open.spotify.com/artist/2hOaj54S74mHupUa8fZ9Em?si=9a7a547a5ba640d9",
+            "genres": {
+                "pt": "j-pop, folk, blues e jazz",
+                "en": "j-pop, folk, blues and jazz",
+                "es": "j-pop, folk, blues y jazz",
+                "it": "j-pop, folk, blues e jazz"
+            }
+        },
+        {
+            "name": "Carameii",
+            "image": "images/songs/artists/carameii.png",
+            "link": "https://open.spotify.com/artist/7tIaXrpDwqcZHK8zuJGjpk?si=4e42e4b5eb154aea",
+            "genres": {
+                "pt": "eletrônica experimental",
+                "en": "experimental electronic",
+                "es": "electrónica experimental",
+                "it": "elettronica sperimentale"
+            }
+        },
+        {
+            "name": "Yuigot",
+            "image": "images/songs/artists/yuigot.png",
+            "link": "https://open.spotify.com/artist/6JpGvdWdOnLTKuNWqOpYT0?si=68c932bb53ee4deb",
+            "genres": {
+                "pt": "j-pop e pop eletrônico",
+                "en": "j-pop and electronic pop",
+                "es": "j-pop y pop electrónico",
+                "it": "j-pop e pop elettronico"
+            }
+        }
+    ],
+    "songs": [
+        {
+            "title": "Too Little Too Late",
+            "artist": "Laufey",
+            "image": "images/songs/musics/toolitletoolate.jpg",
+            "link": "https://open.spotify.com/track/6zEg4KEgz6RGhCPmDKplYf?si=396342b5096045fe"
+        },
+        {
+            "title": "I Want You to Tell Me the Moon is Beautiful!",
+            "artist": "kakizaki yuta",
+            "image": "images/songs/musics/iwantyou.jpeg",
+            "link": "https://open.spotify.com/track/2CSbGdlvxO4sGBEL9ZPAcZ?si=bf96a05edbff4e91"
+        },
+        {
+            "title": "Sweater Weather",
+            "artist": "The Neighbourhood",
+            "image": "images/songs/musics/sweather.jpeg",
+            "link": "https://open.spotify.com/track/0cQVqPuHQP4KEwc7ZUQmj6?si=95bac1d164574e0d"
+        },
+        {
+            "title": "ロストアンブレラ (yuigot Remix)",
+            "artist": "yuigot",
+            "image": "images/songs/musics/yuigotrmeix.jpeg",
+            "link": "https://open.spotify.com/track/50ZpGIhhLctLPDGcSrH5DU?si=8c8da8984c664d30"
+        }
+    ]
+}

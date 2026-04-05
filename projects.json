@@ -1,0 +1,252 @@
+{
+    "web": {
+        "pryzen": {
+            "name": "Pryzen Labs",
+            "image": "images/projects/web/pryzen.space.jpg",
+            "description": {
+                "pt": "Plataforma de scripts para vários sites escolares, como Khan Academy, Redação Paraná, etc...",
+                "en": "Script platform for various school websites, such as Khan Academy, Redação Paraná, etc...",
+                "es": "Plataforma de scripts para varios sitios escolares, como Khan Academy, Redação Paraná, etc...",
+                "it": "Piattaforma di script per vari siti scolastici, come Khan Academy, Redação Paraná, ecc..."
+            },
+            "color": "#a855f7",
+            "font": "'Orbitron', sans-serif",
+            "source": "https://github.com/pryzen-lab/pryzen-lab.github.io",
+            "live": "https://pryzen.space"
+        },
+        "fyscat": {
+            "name": "Fyscat",
+            "image": "images/projects/web/fyscat.jpg",
+            "description": {
+                "pt": "Sistema de gerenciamento fiscal e automação, desenvolvido para otimizar processos internos.",
+                "en": "Fiscal management and automation system, developed to optimize internal processes.",
+                "es": "Sistema de gestión fiscal y automatización, desarrollado para optimizar procesos internos.",
+                "it": "Sistema di gestione fiscale e automazione, sviluppato per ottimizzare i processi interni."
+            },
+            "color": "#0a13b5",
+            "font": "'Inter', sans-serif",
+            "live": "https://fyscat.vercel.app/"
+        },
+        "pryzenai": {
+            "name": "Pryzen AI",
+            "image": "images/projects/web/pryzen.jpg",
+            "description": {
+                "pt": "Inteligência artificial integrada no Fyscat, feita para auxiliar na gestão fiscal e automação de processos.",
+                "en": "Artificial Intelligence integrated into Fyscat, designed to assist in fiscal management and process automation.",
+                "es": "Inteligencia artificial integrada en Fyscat, diseñada para asistir en la gestión fiscal y automatización de procesos.",
+                "it": "Intelligenza artificiale integrata in Fyscat, progettata per assistere nella gestione fiscale e nell'automazione dei processi."
+            },
+            "color": "linear-gradient(45deg, #a855f7, #00f2ff)",
+            "font": "'Manrope', sans-serif"
+        }
+    },
+    "roblox": {
+        "minibloxxers": {
+            "name": "Mini Bloxxers",
+            "image": "images/projects/roblox/mini_bloxxers.png",
+            "description": {
+                "pt": "Um jogo de Farm e de animes no Roblox, inspirado em diversos animes.",
+                "en": "An anime-inspired farming game on Roblox, influenced by various anime series.",
+                "es": "Un juego de granja y anime en Roblox, inspirado en diversas series de anime.",
+                "it": "Un gioco di fattoria e anime su Roblox, ispirato a diverse serie anime."
+            },
+            "color": "linear-gradient(45deg, #a855f7, #facc15)",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://roblox.com/"
+        },
+        "giftmasters": {
+            "name": "Gift Masters 2",
+            "image": "images/projects/roblox/gift_masters.png",
+            "description": {
+                "pt": "Jogo baseado em quebrar presentes e destruí-los para ganhar recompensas, melhorar suas espadas e avançar na progressão do jogo.",
+                "en": "Game themed around breaking and destroying gifts to earn rewards, upgrade swords, and progress through the game.",
+                "es": "Juego basado en romper y destruir regalos para ganar recompensas, mejorar tus espadas y avanzar en la progresión del juego.",
+                "it": "Gioco basato sul rompere e distruggere regali per guadagnare ricompense, potenziare le tue spade e avanzare nella progressione del gioco."
+            },
+            "color": "linear-gradient(45deg, #facc15, #a855f7)",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://roblox.com/"
+        },
+        "stealagarden": {
+            "name": "Steal a Garden",
+            "image": "images/projects/roblox/steal_a_garden.png",
+            "description": {
+                "pt": "Jogo estratégico onde os jogadores competem por recursos e territórios em um ambiente de jardim estilizado e competitivo.",
+                "en": "Strategic game where players compete for resources and territories in a stylized, competitive garden environment.",
+                "es": "Juego estratégico donde los jugadores compiten por recursos y territorios en un entorno de jardín estilizado y competitivo.",
+                "it": "Gioco strategico in cui i giocatori competono per risorse e territori in un ambiente di giardino stilizzato e competitivo."
+            },
+            "color": "#22c55e",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://roblox.com/"
+        },
+        "pfn": {
+            "name": "Project Funk Night",
+            "image": "images/projects/roblox/project_funk_night.png",
+            "description": {
+                "pt": "Experiência musical inspirada em jogos de ritmo, com batalhas intensas e trilhas envolventes para desafiar reflexos e timing.",
+                "en": "Music experience inspired by rhythm games, featuring intense battles and engaging tracks to challenge reflexes and timing.",
+                "es": "Experiencia musical inspirada en juegos de ritmo, con batallas intensas y pistas envolventes para desafiar reflejos y sincronización.",
+                "it": "Esperienza musicale ispirata ai giochi di ritmo, con battaglie intense e tracce coinvolgenti per sfidare riflessi e tempismo."
+            },
+            "color": "#06b6d4",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://roblox.com/"
+        },
+        "skyfall": {
+            "name": "Sky Fall!",
+            "image": "images/projects/roblox/sky_fall.png",
+            "description": {
+                "pt": "Um jogo acelerado onde os jogadores enfrentam quedas intensas e obstáculos, inspirado em Fall Guys",
+                "en": "A fast-paced game where players face intense falls and obstacles, inspired by Fall Guys.",
+                "es": "Un juego trepidante donde los jugadores enfrentan caídas intensas y obstáculos, inspirado en Fall Guys.",
+                "it": "Un gioco frenetico in cui i giocatori affrontano cadute intense e ostacoli, ispirato a Fall Guys."
+            },
+            "color": "#ec4899",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://roblox.com/"
+        },
+        "far": {
+            "name": "PROJECT: FAR",
+            "image": "images/projects/roblox/project_far.png",
+            "description": {
+                "pt": "Jogo de exploração espacial não terminado, com sistema de naves e exploração de planetas.",
+                "en": "Unfinished space exploration game, featuring a spaceship system and planet exploration.",
+                "es": "Juego de exploración espacial sin terminar, con sistema de naves y exploración de planetas.",
+                "it": "Gioco di esplorazione spaziale incompiuto, con sistema di navi ed esplorazione di pianeti."
+            },
+            "color": "#1e3a8a",
+            "font": "'Orbitron', sans-serif",
+            "live": "https://roblox.com/"
+        }
+    },
+    "scratch": {
+        "df1": {
+            "name": "David's Farm 1",
+            "image": "images/projects/scratch/davidsfarm1.png",
+            "description": {
+                "pt": "Jogo feito para o Agrinho de 2024, ganhador do segundo lugar do estado do Paraná.",
+                "en": "Game created for Agrinho 2024, winner of the second place in the state of Paraná.",
+                "es": "Juego creado para Agrinho 2024, ganador del segundo lugar en el estado de Paraná.",
+                "it": "Gioco creato per Agrinho 2024, vincitore del secondo posto nello stato del Paraná."
+            },
+            "color": "#f97316",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://scratch.mit.edu/projects/1005715087/"
+        },
+        "df2": {
+            "name": "David's Farm: Pollution Zero!",
+            "image": "images/projects/scratch/davidsfarm2.png",
+            "description": {
+                "pt": "Jogo feito para o Agrinho de 2025, ganhador do top 10 do estado do Paraná! Bicampeonato conquistado.",
+                "en": "Game created for Agrinho 2025, winner of the top 10 in the state of Paraná! Back-to-back championship achieved.",
+                "es": "¡Juego creado para Agrinho 2025, ganador del top 10 en el estado de Paraná! Bicampeonato conquistado.",
+                "it": "Gioco creato per Agrinho 2025, vincitore della top 10 nello stato del Paraná! Bicampionato conquistato."
+            },
+            "color": "#fb923c",
+            "font": "'Fredoka', sans-serif",
+            "live": "https://scratch.mit.edu/projects/1168676248/   "
+        }
+    },
+    "tutorials": {
+        "tut1": {
+            "id": "R41oidw91E0",
+            "name": "Tutorial #1",
+            "description": {
+                "pt": "Tutorial sobre desenvolvimento e mecânicas.",
+                "en": "Tutorial on development and mechanics.",
+                "es": "Tutorial sobre desarrollo y mecánicas.",
+                "it": "Tutorial su sviluppo e meccaniche."
+            },
+            "color": "#ff0000"
+        },
+        "tut2": {
+            "id": "3rCz6fOh8AM",
+            "name": "Tutorial #2",
+            "description": {
+                "pt": "Explicação detalhada de sistemas avançados.",
+                "en": "Detailed explanation of advanced systems.",
+                "es": "Explicación detallada de sistemas avanzados.",
+                "it": "Spiegazione dettagliata di sistemi avanzati."
+            },
+            "color": "#ff0000"
+        },
+        "tut3": {
+            "id": "FK0v1zm50Ho",
+            "name": "Tutorial #3",
+            "description": {
+                "pt": "Dicas de otimização e script.",
+                "en": "Optimization and scripting tips.",
+                "es": "Consejos de optimización y scripting.",
+                "it": "Suggerimenti per l'ottimizzazione e lo scripting."
+            },
+            "color": "#ff0000"
+        },
+        "tut4": {
+            "id": "8rXNA0M8i4o",
+            "name": "Tutorial #4",
+            "description": {
+                "pt": "Criação de interfaces responsivas.",
+                "en": "Building responsive interfaces.",
+                "es": "Creación de interfaces responsivas.",
+                "it": "Creazione di interfacce reattive."
+            },
+            "color": "#ff0000"
+        },
+        "tut5": {
+            "id": "ScEaTsm4GvM",
+            "name": "Tutorial #5",
+            "description": {
+                "pt": "Mecânicas de jogo e jogabilidade.",
+                "en": "Game mechanics and gameplay.",
+                "es": "Mecánicas de juego y jugabilidad.",
+                "it": "Meccaniche di gioco e gameplay."
+            },
+            "color": "#ff0000"
+        },
+        "tut6": {
+            "id": "mHhQFpPbVhI",
+            "name": "Tutorial #6",
+            "description": {
+                "pt": "Sistemas de dados e persistência.",
+                "en": "Data systems and persistence.",
+                "es": "Sistemas de datos y persistencia.",
+                "it": "Sistemi di dati e persistenza."
+            },
+            "color": "#ff0000"
+        },
+        "tut7": {
+            "id": "94d8HPcJrhA",
+            "name": "Tutorial #7",
+            "description": {
+                "pt": "Integração de APIs escolares.",
+                "en": "School API integration.",
+                "es": "Integración de APIs escolares.",
+                "it": "Integrazione di API scolastiche."
+            },
+            "color": "#ff0000"
+        },
+        "tut8": {
+            "id": "tgejsANRy88",
+            "name": "Tutorial #8",
+            "description": {
+                "pt": "Automação de processos repetitivos.",
+                "en": "Automation of repetitive processes.",
+                "es": "Automatización de procesos repetitivos.",
+                "it": "Automazione di processi ripetitivi."
+            },
+            "color": "#ff0000"
+        },
+        "tut9": {
+            "id": "RV1ymr6KESQ",
+            "name": "Tutorial #9",
+            "description": {
+                "pt": "Design de UI com Glassmorphism.",
+                "en": "UI Design with Glassmorphism.",
+                "es": "Diseño de UI con Glassmorphism.",
+                "it": "Design dell'interfaccia utente con Glassmorphism."
+            },
+            "color": "#ff0000"
+        }
+    }
+}

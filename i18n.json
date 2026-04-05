@@ -99,6 +99,7 @@
             "story_3_desc": "E chegamos nela! A programação, bom, você deve ter visto em toda parte que... Eu gosto de programar, não é? Acho que isso ficou meio óbvio vendo o site. Não tem muito o que falar, mas é um gosto. :D",
             "contact_title": "Contato",
             "contact_intro": "Gostou do meu trabalho ou quer trocar uma ideia? Me chama em qualquer uma das plataformas abaixo!",
+            "contact_other_platforms": "Outras plataformas",
             "contact_copied": "Copiado!"
         },
         "en": {
@@ -178,6 +179,7 @@
             "story_3_desc": "And we got to it! Programming, well, you must have seen everywhere that... I like to program, haven't you? I think that much is obvious seeing the site. Not much to say, but it's a hobby. :D",
             "contact_title": "Contact",
             "contact_intro": "Liked my work or want to chat? Reach out to me on any of the platforms below!",
+            "contact_other_platforms": "Other platforms",
             "contact_copied": "Copied!"
         },
         "es": {
@@ -257,6 +259,7 @@
             "story_3_desc": "¡Y llegamos a esto! Programación, bueno, debes haber visto en todas partes que... Me gusta programar, ¿verdad? Creo que eso es bastante obvio al ver el sitio. No hay mucho que decir, pero es un pasatiempo. :D",
             "contact_title": "Contacto",
             "contact_intro": "¿Te gustó mi trabajo o quieres charlar? ¡Contáctame en cualquiera de las plataformas a continuación!",
+            "contact_other_platforms": "Otras plataformas",
             "contact_copied": "¡Copiado!"
         },
         "it": {
@@ -336,6 +339,7 @@
             "story_3_desc": "Ed eccoci qua! La programmazione, beh, avrai visto ovunque che... Mi piace programmare, vero? Penso che sia abbastanza ovvio guardando il sito. Non c'è molto da dire, ma è un hobby. :D",
             "contact_title": "Contatti",
             "contact_intro": "Ti è piaciuto il mio lavoro o vuoi fare due chiacchiere? Contattami su una qualsiasi delle piattaforme qui sotto!",
+            "contact_other_platforms": "Altre piattaforme",
             "contact_copied": "Copiato!"
         }
     }
