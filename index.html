@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
 
     <header class="main-header pre-load">
         <div class="header-container">
@@ -25,27 +26,27 @@
                         <span class="lang-arrow">⌄</span>
                     </button>
                     <ul class="lang-dropdown" id="lang-menu">
-                        <!-- Gerado dinamicamente no script.js -->
+
                     </ul>
                 </div>
             </div>
             <nav class="header-right">
-                <a href="#top"><img src="images/icons/inicio.svg" alt="Início" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_start">Início</span></a>
-                <a href="#about"><img src="images/icons/sobre%20mim.svg" alt="Sobre" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_about">Sobre</span></a>
-                <a href="#tools"><img src="images/icons/ferramentas.svg" alt="Ferramentas" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_tools">Ferramentas</span></a>
-                <a href="#achievements"><img src="images/icons/conquistas.svg" alt="Conquistas" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_achievements">Conquistas</span></a>
-                <a href="#projects"><img src="images/icons/projetos.svg" alt="Projetos" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_projects">Projetos</span></a>
-                <a href="#musics"><img src="images/icons/musicas.svg" alt="Músicas" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_musics">Músicas</span></a>
-                <a href="#horizontal-story"><img src="images/icons/gostos%20pessoas.svg" alt="Gostos Pessoais"
-                        class="nav-icon"><span class="header-tooltip" data-i18n="nav_personality">Personalidade</span></a>
-                <a href="#contact"><img src="images/icons/contato.svg" alt="Contato" class="nav-icon"><span
-                        class="header-tooltip" data-i18n="nav_contact">Contato</span></a>
+                <a href="#top"><img src="images/icons/inicio.svg" alt="Start" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_start">Start</span></a>
+                <a href="#about"><img src="images/icons/sobre%20mim.svg" alt="About" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_about">About</span></a>
+                <a href="#tools"><img src="images/icons/ferramentas.svg" alt="Tools" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_tools">Tools</span></a>
+                <a href="#achievements"><img src="images/icons/conquistas.svg" alt="Achievements" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_achievements">Achievements</span></a>
+                <a href="#projects"><img src="images/icons/projetos.svg" alt="Projects" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_projects">Projects</span></a>
+                <a href="#musics"><img src="images/icons/musicas.svg" alt="Musics" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_musics">Musics</span></a>
+                <a href="#horizontal-story"><img src="images/icons/gostos%20pessoas.svg" alt="Personal Interests"
+                        class="nav-icon"><span class="header-tooltip" data-i18n="nav_personality">Personality</span></a>
+                <a href="#contact"><img src="images/icons/contato.svg" alt="Contact" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_contact">Contact</span></a>
             </nav>
             <div class="hamburger-menu" id="hamburger-btn">
                 <span></span>
@@ -57,20 +58,19 @@
 
     <div class="mobile-menu-overlay" id="mobile-menu">
         <div class="mobile-menu-content">
-            <a href="#top" class="mobile-link" data-i18n="nav_start">Início</a>
-            <a href="#about" class="mobile-link" data-i18n="nav_about">Sobre</a>
-            <a href="#tools" class="mobile-link" data-i18n="nav_tools">Ferramentas</a>
-            <a href="#achievements" class="mobile-link" data-i18n="nav_achievements">Conquistas</a>
-            <a href="#projects" class="mobile-link" data-i18n="nav_projects">Projetos</a>
-            <a href="#musics" class="mobile-link" data-i18n="nav_musics">Músicas</a>
-            <a href="#horizontal-story" class="mobile-link" data-i18n="nav_personality">Personalidade</a>
-            <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contato</a>
+            <a href="#top" class="mobile-link" data-i18n="nav_start">Start</a>
+            <a href="#about" class="mobile-link" data-i18n="nav_about">About</a>
+            <a href="#tools" class="mobile-link" data-i18n="nav_tools">Tools</a>
+            <a href="#achievements" class="mobile-link" data-i18n="nav_achievements">Achievements</a>
+            <a href="#projects" class="mobile-link" data-i18n="nav_projects">Projects</a>
+            <a href="#musics" class="mobile-link" data-i18n="nav_musics">Musics</a>
+            <a href="#horizontal-story" class="mobile-link" data-i18n="nav_personality">Personality</a>
+            <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact</a>
         </div>
     </div>
 
     <canvas id="matrix-canvas"></canvas>
-
-    <canvas id="bg-canvas"></canvas>
+    <canvas id="trail-canvas"></canvas>
 
     <div class="presentation" id="top">
         <div class="presentation-text">
@@ -79,8 +79,8 @@
 
             <div class="hero-footer">
                 <div class="hero-btns">
-                    <a href="#about" class="btn-hero btn-filled" data-i18n="btn_about">sobre mim</a>
-                    <a href="#contact" class="btn-hero btn-outline" data-i18n="btn_contact">contato</a>
+                    <a href="#about" class="btn-hero btn-filled" data-i18n="btn_about">about me</a>
+                    <a href="#contact" class="btn-hero btn-outline" data-i18n="btn_contact">contact</a>
                 </div>
                 <p class="quote"><span data-i18n="quote_hero">"Eu só comecei cedo demais e não tem volta"</span><br><span>- Deon</span></p>
             </div>
@@ -96,13 +96,13 @@
     </div>
 
     <div id="scroll-indicator">
-        <span data-i18n="scroll_indicator">Desça para ver mais informações</span>
+        <span data-i18n="scroll_indicator">Scroll to see more information</span>
         <img src="images/icons/scroll.svg" alt="" class="scroll-icon">
     </div>
 
     <section id="about" class="section-about">
         <div class="container-about">
-            <h2 class="section-title" data-i18n="about_title">Sobre Mim</h2>
+            <h2 class="section-title" data-i18n="about_title">About Me</h2>
 
             <div class="about-grid">
                 <div class="about-text-content">
@@ -150,12 +150,12 @@
 
     <section id="tools" class="section-tools">
         <div class="container-tools">
-            <h2 class="tools-title" data-i18n="tools_title">Ferramentas e Software</h2>
+            <h2 class="tools-title" data-i18n="tools_title">Tools & Software</h2>
 
             <div class="tools-selector">
                 <button class="tab-btn active" data-tab="software" data-i18n="tab_software">Software</button>
-                <button class="tab-btn" data-tab="ferramentas-tab" data-i18n="tab_tools">Ferramentas</button>
-                <button class="tab-btn" data-tab="linguagens" data-i18n="tab_languages">Linguagens</button>
+                <button class="tab-btn" data-tab="tools-tab" data-i18n="tab_tools">Tools</button>
+                <button class="tab-btn" data-tab="languages-tab" data-i18n="tab_languages">Languages</button>
             </div>
 
             <div class="tools-nav-wrapper">
@@ -238,7 +238,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-content" id="ferramentas-tab">
+                        <div class="tab-content" id="tools-tab">
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_code">// Código</h4>
                                 <div class="software-grid">
@@ -358,7 +358,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-content" id="linguagens">
+                        <div class="tab-content" id="languages-tab">
 
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_learned">// Linguagens que sei</h4>
@@ -523,16 +523,16 @@
 
     <section id="achievements" class="section-achievements section-about">
         <div class="container-about">
-            <h2 class="section-title" data-i18n="ach_title">Conquistas</h2>
+            <h2 class="section-title" data-i18n="ach_title">Achievements</h2>
             <div class="about-text-content intro-achievements">
-                <div class="bicamp-container">
-                    <img src="images/bicamp.svg" alt="Bicampeão do Agrinho" class="logo-bicampeao">
+                <div class="champion-container">
+                    <img src="images/bicamp.svg" alt="Agrinho Champion" class="champion-logo">
                 </div>
                 <p data-i18n="ach_intro">Durante os anos de 2024 e 2025, participei do Concurso Agrinho, promovido pelo Sistema FAEP/SENAR-PR,
                     conquistando destaque em nível estadual. Participando pelos colégios Civicos do Paraná.</p>
             </div>
             <div class="achievements-display">
-                <img src="images/agrinho.png" alt="Conquista Agrinho" class="agrinho-img">
+                <img src="images/agrinho.png" alt="Agrinho Achievement" class="achievement-image">
             </div>
             <div class="timeline-container">
                 <div class="timeline-item">
@@ -543,8 +543,8 @@
                         <h3 class="timeline-title" data-i18n="ach_2024_t">2º Lugar no Paraná</h3>
                         <p data-i18n="ach_2024_d">Participei do Concurso Agrinho (Sistema FAEP/SENAR-PR), alcançando a 2ª colocação geral no
                             estado do Paraná na categoria de programação com Scratch.</p>
-                        <a href="https://scratch.mit.edu/projects/1005715087/" target="_blank" class="btn-jogar">
-                            <span data-i18n="btn_play">Jogar Agora</span>
+                        <a href="https://scratch.mit.edu/projects/1005715087/" target="_blank" class="btn-play">
+                            <span data-i18n="btn_play">Play Now</span>
                             <img src="images/icons/redirect.svg" alt="Redirect" class="btn-icon">
                         </a>
                     </div>
@@ -558,8 +558,8 @@
                         <h3 class="timeline-title" data-i18n="ach_2025_t">Top 10 & Bicampeonato</h3>
                         <p data-i18n="ach_2025_d">Mantive o alto desempenho e novamente me destaquei entre os 10 melhores do estado, garantindo
                             meu bicampeonato na competição Agrinho.</p>
-                        <a href="https://scratch.mit.edu/projects/1168676248/" target="_blank" class="btn-jogar">
-                            <span data-i18n="btn_play">Jogar Agora</span>
+                        <a href="https://scratch.mit.edu/projects/1168676248/" target="_blank" class="btn-play">
+                            <span data-i18n="btn_play">Play Now</span>
                             <img src="images/icons/redirect.svg" alt="Redirect" class="btn-icon">
                         </a>
                     </div>
@@ -572,7 +572,7 @@
 
     <section id="projects" class="section-projects section-about">
         <div class="container-about">
-            <h2 class="section-title" data-i18n="projects_title">Projetos</h2>
+            <h2 class="section-title" data-i18n="projects_title">Projects</h2>
             <div class="about-text-content" style="position: relative;">
                 <p data-i18n="projects_intro">Ao longo da minha vida, fiz alguns projetos e aqui estão, dê uma olhada e tome sua opinião!</p>
                 <div class="projects-deco-bracket"></div>
@@ -611,15 +611,15 @@
         <div id="music-particles" class="particles-container"></div>
 
         <div class="container-about">
-            <h2 class="section-title" data-i18n="musics_title">Músicas</h2>
+            <h2 class="section-title" data-i18n="musics_title">Musics</h2>
             <div class="about-text-content">
                 <p data-i18n="musics_intro">Artistas e músicas que eu não paro de ouvir:</p>
             </div>
 
             <div class="musics-container">
                 <nav class="musics-nav tools-selector">
-                    <button class="music-tab tab-btn active" data-musica="artists" data-i18n="music_tab_artists">Artistas Favoritos</button>
-                    <button class="music-tab tab-btn" data-musica="songs" data-i18n="music_tab_songs">Músicas Favoritas</button>
+                    <button class="music-tab tab-btn active" data-music="artists" data-i18n="music_tab_artists">Favorite Artists</button>
+                    <button class="music-tab tab-btn" data-music="songs" data-i18n="music_tab_songs">Favorite Songs</button>
                 </nav>
 
                 <main class="musics-display">
@@ -654,7 +654,7 @@
     <section id="horizontal-story" class="section-horizontal">
         <div class="h-story-sticky">
             <div class="h-story-header">
-                <h2 class="section-title" data-i18n="story_title">Gostos Pessoais</h2>
+                <h2 class="section-title" data-i18n="story_title">Personal Interests</h2>
             </div>
 
             <div class="h-story-track">
@@ -721,7 +721,7 @@
 
     <section id="contact" class="section-contact section-about section-projects">
         <div class="container-about">
-            <h2 class="section-title" data-i18n="contact_title">Contato</h2>
+            <h2 class="section-title" data-i18n="contact_title">Contact</h2>
             <div class="about-text-content">
                 <p data-i18n="contact_intro">Gostou do meu trabalho ou quer trocar uma ideia? Me chama em qualquer uma das plataformas abaixo!</p>
             </div>
@@ -756,7 +756,7 @@
             </div>
 
             <div class="contact-others">
-                <h3 class="contact-others-title" data-i18n="contact_other_platforms">Outras plataformas</h3>
+                <h3 class="contact-others-title" data-i18n="contact_other_platforms">Other platforms</h3>
                 <div class="contact-row others-row">
                     <a href="https://www.roblox.com/users/3426790008/profile" target="_blank" class="contact-icon-link">
                         <img src="images/icons/roblox.svg" alt="Roblox" class="contact-icon-img custom-gold">
@@ -800,6 +800,7 @@
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

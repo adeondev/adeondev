@@ -1,4 +1,4 @@
-// O dicionário de traduções e a configuração de idiomas agora são carregados do i18n.json
+
 class I18nManager {
     constructor() {
         this.currentLang = localStorage.getItem('site-lang') || 'pt';
@@ -17,7 +17,6 @@ class I18nManager {
 
             document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
 
-            // Inicializar o restante do site agora que as traduções estão prontas
             if (typeof restartTypewriter === 'function') restartTypewriter();
             if (typeof loadProjects === 'function') loadProjects();
             if (typeof loadMusics === 'function') loadMusics();
@@ -103,7 +102,6 @@ class I18nManager {
 
 const i18n = new I18nManager();
 
-
 let targetY = window.scrollY;
 let currentY = window.scrollY;
 const smoothness = 0.08;
@@ -142,6 +140,13 @@ function animateScroll() {
         isScriptScrolling = false;
     }
 
+    const scrollProgressBar = document.getElementById('scroll-progress');
+    if (scrollProgressBar) {
+        const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollRange > 0 ? (currentY / scrollRange) * 100 : 0;
+        scrollProgressBar.style.width = `${progress}%`;
+    }
+
     requestAnimationFrame(animateScroll);
 }
 
@@ -152,7 +157,6 @@ function updateHorizontalStory() {
     const track = document.querySelector('.h-story-track');
     if (!section || !track) return;
 
-    // Disable horizontal scroll logic on mobile
     if (window.innerWidth <= 900) {
         track.style.transform = '';
         return;
@@ -202,16 +206,6 @@ window.addEventListener('load', updateHorizontalStory);
 
 animateScroll();
 
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 const trail = [];
@@ -222,10 +216,52 @@ document.addEventListener('mousemove', (e) => {
     mouseY = e.clientY;
 });
 
-function drawTrail() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    trail.push({ x: mouseX, y: mouseY });
+const matrixCanvas = document.getElementById('matrix-canvas');
+const mCtx = matrixCanvas.getContext('2d');
+const trailCanvas = document.getElementById('trail-canvas');
+const tCtx = trailCanvas.getContext('2d');
 
+function initMatrix() {
+    const dpr = window.devicePixelRatio || 1;
+    [matrixCanvas, trailCanvas].forEach(canvas => {
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+    });
+}
+
+function throttle(func, limit) {
+    let inThrottle;
+    return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+initMatrix();
+
+window.addEventListener('resize', throttle(initMatrix, 200));
+
+function drawMatrix() {
+
+    mCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    const glowGradient = mCtx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 500);
+    glowGradient.addColorStop(0, 'rgba(253, 184, 44, 0.05)');
+    glowGradient.addColorStop(1, 'rgba(9, 6, 4, 0)');
+    mCtx.fillStyle = glowGradient;
+    mCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+
+    tCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    trail.push({ x: mouseX, y: mouseY });
     if (trail.length > maxTrail) {
         trail.shift();
     }
@@ -234,130 +270,15 @@ function drawTrail() {
         for (let i = 0; i < trail.length - 1; i++) {
             const p1 = trail[i];
             const p2 = trail[i + 1];
-
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-
+            tCtx.beginPath();
+            tCtx.moveTo(p1.x, p1.y);
+            tCtx.lineTo(p2.x, p2.y);
             const ratio = i / trail.length;
-            ctx.strokeStyle = `rgba(255, 255, 255, ${ratio * 0.8})`;
-            ctx.lineWidth = Math.max(0.5, ratio * 4);
-            ctx.lineCap = 'round';
-            ctx.stroke();
+            tCtx.strokeStyle = `rgba(253, 184, 44, ${ratio * 0.4})`;
+            tCtx.lineWidth = Math.max(0.5, ratio * 3);
+            tCtx.lineCap = 'round';
+            tCtx.stroke();
         }
-    }
-
-    requestAnimationFrame(drawTrail);
-}
-
-drawTrail();
-
-const matrixCanvas = document.getElementById('matrix-canvas');
-const mCtx = matrixCanvas.getContext('2d');
-
-function initMatrix() {
-    matrixCanvas.width = window.innerWidth;
-    matrixCanvas.height = window.innerHeight;
-}
-window.addEventListener('resize', initMatrix);
-initMatrix();
-
-const chars = '01{}[]()<>+-*="/\\$#~!?&ABCDFXYZ'.split('');
-const fontSize = 20;
-let columns = Math.floor(matrixCanvas.width / fontSize);
-let drops = [];
-
-function resetDrops() {
-    columns = Math.floor(matrixCanvas.width / fontSize);
-    drops = [];
-    for (let i = 0; i < columns; i++) {
-        drops[i] = Math.random() * -100;
-    }
-}
-resetDrops();
-window.addEventListener('resize', resetDrops);
-
-const attractors = [];
-function updateAttractors() {
-
-    const selectors = [
-        '.presentation-text',
-        '.profile-photo',
-        '.section-title',
-        '.projeto-card',
-        '.software-item',
-        '.conquista-card',
-        '.musica-card',
-        '.h-panel-content',
-        '.contact-row'
-    ];
-    attractors.length = 0;
-    selectors.forEach(sel => {
-        const elements = document.querySelectorAll(sel);
-        elements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-
-            if (rect.bottom > 0 && rect.top < window.innerHeight) {
-                attractors.push({
-                    x: rect.left + rect.width / 2,
-                    y: rect.top + rect.height / 2,
-                    radius: Math.max(rect.width, rect.height) / 0.8
-                });
-            }
-        });
-    });
-}
-window.addEventListener('resize', updateAttractors);
-window.addEventListener('scroll', updateAttractors);
-
-setTimeout(updateAttractors, 1000);
-
-function drawMatrix() {
-    mCtx.fillStyle = 'rgba(9, 6, 4, 0.15)';
-    mCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-
-    const glowGradient = mCtx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 500);
-    glowGradient.addColorStop(0, 'rgba(253, 184, 44, 0.015)');
-    glowGradient.addColorStop(1, 'rgba(9, 6, 4, 0)');
-
-    mCtx.fillStyle = glowGradient;
-    mCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-
-    mCtx.font = fontSize + 'px monospace';
-
-    for (let i = 0; i < drops.length; i++) {
-        const charX = i * fontSize;
-        const charY = drops[i] * fontSize;
-
-        const dx = mouseX - charX;
-        const dy = mouseY - charY;
-        const mouseDistance = Math.sqrt(dx * dx + dy * dy);
-
-        let alpha = 0.05;
-
-        if (mouseDistance < 200) {
-            alpha = Math.max(alpha, Math.min(0.12, 0.02 + (200 - mouseDistance) / 1500));
-        }
-
-        attractors.forEach(attr => {
-            const adx = attr.x - charX;
-            const ady = attr.y - charY;
-            const attrDistance = Math.sqrt(adx * adx + ady * ady);
-            if (attrDistance < attr.radius) {
-
-                const intensity = Math.min(0.08, 0.02 + (attr.radius - attrDistance) / 2000);
-                alpha = Math.max(alpha, intensity);
-            }
-        });
-
-        const text = chars[Math.floor(Math.random() * chars.length)];
-        mCtx.fillStyle = `rgba(253, 184, 44, ${alpha})`;
-        mCtx.fillText(text, charX, charY);
-
-        if (charY > matrixCanvas.height && Math.random() > 0.98) {
-            drops[i] = 0;
-        }
-        drops[i] += 0.35;
     }
 
     requestAnimationFrame(drawMatrix);
@@ -367,21 +288,12 @@ drawMatrix();
 
 const indicator = document.getElementById('scroll-indicator');
 setTimeout(() => {
-    if (indicator) indicator.classList.add('visivel');
+    if (indicator) indicator.classList.add('visible');
 }, 1500);
 
 window.addEventListener('scroll', () => {
-    if (indicator) indicator.classList.toggle('escondido', window.scrollY > 50);
+    if (indicator) indicator.classList.toggle('hidden', window.scrollY > 50);
 });
-
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('revelada');
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.15 });
 
 function handleActiveNav() {
     const navLinks = document.querySelectorAll('.header-right a');
@@ -413,12 +325,6 @@ function handleActiveNav() {
     }
 }
 
-const revealElements = ['about', 'tools', 'achievements', 'projects', 'musics', 'contact'];
-revealElements.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) revealObserver.observe(el);
-});
-
 window.addEventListener('scroll', handleActiveNav);
 handleActiveNav();
 
@@ -437,7 +343,7 @@ function restartTypewriter() {
         if (k < fullText.length) {
             const char = fullText.charAt(k);
             const span = document.createElement('span');
-            span.classList.add('letra');
+            span.classList.add('letter');
             span.textContent = char;
 
             const isHi = (i18n.currentLang === 'pt' && k >= 12 && k <= 15) ||
@@ -454,11 +360,6 @@ function restartTypewriter() {
     }
     setTimeout(type, 50);
 }
-
-// Removido o início automático global para evitar race condition com o fetch do i18n
-// if (typewriterElement) {
-//     restartTypewriter();
-// }
 
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -568,9 +469,6 @@ function renderWithTransition(newCategory) {
 
     const currentIndex = categoryOrder.indexOf(currentCategory);
     const newIndex = categoryOrder.indexOf(newCategory);
-
-    // Removido o retorno antecipado para permitir re-renderização ao mudar de idioma
-    // if (currentIndex === newIndex && oldGrid && oldGrid.innerHTML !== '') return;
 
     isProjectsTransitioning = true;
     if (sidebar) sidebar.classList.add('is-loading');
@@ -779,13 +677,13 @@ window.addEventListener('keydown', (e) => {
 });
 
 function updateProjectIndicator(tab) {
-    const indicador = document.querySelector('.project-active-bg');
-    if (!indicador || !tab) return;
+    const indicator = document.querySelector('.project-active-bg');
+    if (!indicator || !tab) return;
 
-    indicador.style.width = `${tab.offsetWidth}px`;
-    indicador.style.height = `${tab.offsetHeight}px`;
-    indicador.style.left = `${tab.offsetLeft}px`;
-    indicador.style.top = `${tab.offsetTop}px`;
+    indicator.style.width = `${tab.offsetWidth}px`;
+    indicator.style.height = `${tab.offsetHeight}px`;
+    indicator.style.left = `${tab.offsetLeft}px`;
+    indicator.style.top = `${tab.offsetTop}px`;
 }
 
 const btnProjects = document.querySelectorAll('.project-tab');
@@ -810,8 +708,6 @@ window.addEventListener('resize', () => {
     const activeTab = document.querySelector('.project-tab.active');
     if (activeTab) updateProjectIndicator(activeTab);
 });
-
-// loadProjects(); // Chamado agora pelo i18n.init() quando as traduções estiverem prontas
 
 const header = document.querySelector('.main-header');
 window.addEventListener('scroll', () => {
@@ -847,16 +743,13 @@ function renderWithTransitionMusic(newCategory) {
     const currentIndex = categories.indexOf(currentMusicCategory);
     const newIndex = categories.indexOf(newCategory);
 
-    // Removido o retorno antecipado para permitir re-renderização ao mudar de idioma
-    // if (currentIndex === newIndex && oldGrid && oldGrid.innerHTML !== '') return;
-
     isMusicsTransitioning = true;
     if (nav) nav.style.pointerEvents = 'none';
 
     const isMovingForward = newIndex > currentIndex;
 
     const newGrid = document.createElement('div');
-    newGrid.className = 'music-grid' + (newCategory === 'songs' ? ' musica-list-view' : '');
+    newGrid.className = 'music-grid' + (newCategory === 'songs' ? ' music-list-view' : '');
     newGrid.id = 'music-grid';
 
     renderMusicItems(newCategory, newGrid);
@@ -952,12 +845,12 @@ function renderMusicItems(category, container) {
     } else if (category === 'songs') {
         items.forEach((music, index) => {
             const card = document.createElement('a');
-            card.className = 'artist-card musica-card';
+            card.className = 'artist-card music-card';
             card.href = music.link;
             card.target = '_blank';
             card.innerHTML = `
                 <span class="artist-rank">#${index + 1}</span>
-                <div class="artist-img-wrapper musica-img-wrapper">
+                <div class="artist-img-wrapper music-img-wrapper">
                     <img src="${music.image}" alt="${music.title}" class="artist-img">
                 </div>
                 <div class="artist-info">
@@ -995,7 +888,7 @@ function updateMusicSelector() {
     const tabs = document.querySelectorAll('.music-tab.tab-btn');
 
     tabs.forEach(tab => {
-        if (tab.dataset.musica === currentMusicCategory) {
+        if (tab.dataset.music === currentMusicCategory) {
             tab.classList.add('active');
         } else {
             tab.classList.remove('active');
@@ -1005,12 +898,12 @@ function updateMusicSelector() {
 
 document.querySelectorAll('.music-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-        if (!isMusicsTransitioning) loadMusics(tab.dataset.musica);
+        if (!isMusicsTransitioning) loadMusics(tab.dataset.music);
     });
 });
 
 setTimeout(() => {
-    // loadMusics('artists'); // Chamado agora pelo i18n.init()
+
     updateMusicSelector();
 }, 100);
 
@@ -1132,7 +1025,7 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
 
     function spawnParticle() {
         const p = document.createElement('div');
-        p.className = 'musical-p';
+        p.className = 'musical-particle';
 
         const symbol = symbols[Math.floor(Math.random() * symbols.length)];
         const size = Math.floor(Math.random() * (35 - 12 + 1)) + 12;
@@ -1178,11 +1071,11 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
 
         navigator.clipboard.writeText(textToCopy).then(() => {
             tooltip.innerText = i18n.t('contact_copied');
-            tooltip.classList.add('copiado');
+            tooltip.classList.add('copied');
 
             setTimeout(() => {
                 tooltip.innerText = originalText;
-                tooltip.classList.remove('copiado');
+                tooltip.classList.remove('copied');
             }, 2000);
         }).catch(err => {
             console.error('Erro ao copiar: ', err);
@@ -1190,7 +1083,6 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
     });
 })();
 
-// Mobile Menu Logic
 (function () {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
