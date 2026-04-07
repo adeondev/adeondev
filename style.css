@@ -347,6 +347,86 @@ body.light-mode .sun-rays {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+.spotify-floating-player {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10001;
+    background: rgba(18, 18, 18, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    max-width: 480px;
+}
+.spotify-floating-player.minimized {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 28px;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+.player-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.player-toggle:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+.spotify-floating-player.minimized .player-toggle {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: inherit;
+}
+.player-content {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+}
+.spotify-floating-player.minimized .player-content {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+.player-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+.toggle-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.spotify-floating-player.minimized .toggle-icon {
+    transform: rotate(180deg);
+}
 #matrix-canvas {
     position: fixed;
     top: 0;
@@ -2509,4 +2589,359 @@ body.light-mode .sun-rays {
         min-height: auto;
         width: 100%;
     }
+}
+
+
+
+.theme-toggle-svg .standard-icons,
+.theme-toggle-svg .xp-logo {
+    transform-origin: center;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+                opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.theme-toggle-svg .xp-logo {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+}
+
+body.theme-1990 .theme-toggle-svg .standard-icons {
+    opacity: 0;
+    transform: scale(0) rotate(180deg);
+}
+
+body.theme-1990 .theme-toggle-svg .xp-logo {
+    opacity: 1;
+    transform: scale(1.6) rotate(0deg);
+}
+
+
+body.theme-1990 {
+    background: url('https://w.wallhaven.cc/full/xl/wallhaven-xle1dv.jpg') center/cover fixed !important;
+    background-color: #004b91 !important;
+    color: #ffffff !important;
+    font-family: 'Tahoma', 'Verdana', sans-serif !important;
+    scroll-behavior: auto !important;
+}
+
+
+body.theme-1990, 
+body.theme-1990 *,
+body.theme-1990 p,
+body.theme-1990 span,
+body.theme-1990 h1,
+body.theme-1990 h2,
+body.theme-1990 h3,
+body.theme-1990 h4,
+body.theme-1990 a,
+body.theme-1990 li,
+body.theme-1990 .btn-hero,
+body.theme-1990 .lang-current span {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+
+body.theme-1990 .lang-selector,
+body.theme-1990 .lang-current {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+body.theme-1990 * {
+    border-radius: 8px !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+
+body.theme-1990 .main-header,
+body.theme-1990 .project-item,
+body.theme-1990 .timeline-card,
+body.theme-1990 .artist-card,
+body.theme-1990 .project-tab,
+body.theme-1990 .spotify-floating-player,
+body.theme-1990 .lang-dropdown {
+    position: relative !important;
+    overflow: hidden !important;
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.25) 0%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        rgba(255, 255, 255, 0.05) 50%, 
+        rgba(255, 255, 255, 0.1) 100%) !important;
+    backdrop-filter: blur(20px) saturate(1.8) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.7) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 
+                inset 0 0 1px rgba(255, 255, 255, 0.5) !important;
+}
+
+
+body.theme-1990 .lang-dropdown {
+    visibility: visible !important;
+    opacity: 0; 
+
+}
+body.theme-1990 .lang-selector.active .lang-dropdown {
+    opacity: 1 !important;
+}
+
+
+body.theme-1990 .main-header::after,
+body.theme-1990 .project-item::after,
+body.theme-1990 .artist-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: -50% !important;
+    left: -50% !important;
+    width: 200% !important;
+    height: 200% !important;
+    background: linear-gradient(45deg, 
+        transparent 45%, 
+        rgba(255, 255, 255, 0.1) 48%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 255, 255, 0.1) 52%, 
+        transparent 55%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    animation: aeroSheen 8s infinite linear !important;
+}
+
+@keyframes aeroSheen {
+    0% { transform: translate(-30%, -30%) rotate(0deg); }
+    100% { transform: translate(30%, 30%) rotate(0deg); }
+}
+
+
+body.theme-1990 .theme-toggle {
+    width: 45px !important;
+    height: 45px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    background: radial-gradient(circle at 50% 30%, #a5d6a7 0%, #4caf50 40%, #1b5e20 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6), 
+                inset 0 2px 10px rgba(255, 255, 255, 0.8) !important;
+    margin-right: 10px !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    z-index: 1002 !important;
+}
+
+body.theme-1990 .theme-toggle:hover {
+    transform: scale(1.1) rotate(5deg) !important;
+    box-shadow: 0 0 35px rgba(76, 175, 80, 0.9) !important;
+}
+
+
+body.theme-1990 .main-header {
+    display: none !important;
+
+}
+
+.win7-taskbar {
+    display: none;
+
+}
+
+body.theme-1990 .win7-taskbar {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 40px !important;
+    background: linear-gradient(to bottom, 
+        rgba(10, 100, 200, 0.7) 0%, 
+        rgba(5, 70, 150, 0.85) 50%, 
+        rgba(2, 40, 100, 0.9) 100%) !important;
+    backdrop-filter: blur(25px) saturate(2) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(2) !important;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+    z-index: 10000 !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 0px 0 0 !important;
+
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.win7-taskbar .taskbar-left {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+
+.win7-taskbar .win-start-orb {
+    width: 52px !important;
+    height: 52px !important;
+    margin-top: -12px !important;
+
+    margin-left: -5px !important;
+    border-radius: 50% !important;
+    background: radial-gradient(circle at 50% 30%, #a5d6a7 0%, #4caf50 40%, #1b5e20 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6), 
+                inset 0 2px 10px rgba(255, 255, 255, 0.8) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    z-index: 10001 !important;
+}
+
+.win7-taskbar .win-start-orb:hover {
+    transform: scale(1.1) rotate(5deg) !important;
+    box-shadow: 0 0 30px rgba(76, 175, 80, 0.9) !important;
+}
+
+.win7-taskbar .win-start-orb .xp-logo {
+    width: 32px !important;
+    height: 32px !important;
+    transform: scale(0.8) !important;
+}
+
+
+.win7-taskbar .taskbar-apps {
+    display: flex !important;
+    gap: 2px !important;
+    margin-left: 10px !important;
+    height: 100% !important;
+    align-items: center !important;
+}
+
+.win7-taskbar .taskbar-app {
+    height: 85% !important;
+    padding: 0 15px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.win7-taskbar .taskbar-app:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: inset 0 15px 15px rgba(255, 255, 255, 0.1) !important;
+}
+
+
+.win7-taskbar .taskbar-right {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.win7-taskbar .taskbar-tray {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 10px !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.win7-taskbar .taskbar-lang {
+    cursor: pointer !important;
+    padding: 2px !important;
+}
+
+.win7-taskbar .taskbar-lang img {
+    width: 22px !important;
+    height: auto !important;
+    border-radius: 2px !important;
+}
+
+.win7-taskbar .taskbar-clock {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-size: 0.75rem !important;
+    color: white !important;
+    min-width: 80px !important;
+}
+
+.win7-taskbar .show-desktop {
+    width: 15px !important;
+    height: 100% !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    margin-left: 5px !important;
+}
+
+.win7-taskbar .show-desktop:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+
+body.theme-1990 #scroll-progress,
+body.theme-1990 .spotify-floating-player {
+    bottom: 50px !important;
+}
+
+body.theme-1990 #scroll-indicator {
+    bottom: 120px !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.theme-1990 .scroll-icon {
+    filter: invert(1) drop-shadow(0 2px 5px rgba(0,0,0,0.5)) !important;
+}
+
+body.theme-1990 .presentation {
+    background: url('images/frutigerbackground.svg') center/cover no-repeat !important;
+}
+
+
+body.theme-1990 section,
+body.theme-1990 footer,
+body.theme-1990 main,
+body.theme-1990 .section-projects,
+body.theme-1990 .section-achievements,
+body.theme-1990 .section-tools,
+body.theme-1990 .section-musics,
+body.theme-1990 .section-contact,
+body.theme-1990 #horizontal-story {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+body.theme-1990 .section-title,
+body.theme-1990 .tools-title {
+    background: linear-gradient(to right, rgba(0, 162, 237, 0.8), transparent) !important;
+    padding: 12px 25px !important;
+    border-left: 5px solid #ffffff !important;
+}
+
+body.theme-1990 .section-title::before,
+body.theme-1990 .section-title::after,
+body.theme-1990 .tools-title::after {
+    display: none !important;
+}
+
+
+body.theme-1990 .btn-hero {
+    background: linear-gradient(to bottom, #ffd700 0%, #ff8c00 100%) !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+
+body.theme-1990 #matrix-canvas,
+body.theme-1990 .particles-container,
+body.theme-1990 .main-header::before,
+body.theme-1990 .project-category-title {
+    display: none !important;
 }

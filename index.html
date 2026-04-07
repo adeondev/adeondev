@@ -25,21 +25,29 @@
                     <ul class="lang-dropdown" id="lang-menu"></ul>
                 </div>
                 <button class="theme-toggle" id="theme-switch" aria-label="Alterar tema">
-                    <svg viewBox="0 0 24 24" fill="none" class="theme-toggle-svg">
-                        <mask id="moon-mask">
-                            <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                            <circle cx="17" cy="7" r="9" fill="black" class="moon-mask-circle" />
-                        </mask>
-                        <circle cx="12" cy="12" r="10" fill="currentColor" mask="url(#moon-mask)" class="sun-moon-core" />
-                        <g class="sun-rays" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                            <line x1="12" y1="1" x2="12" y2="4" />
-                            <line x1="12" y1="20" x2="12" y2="23" />
-                            <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
-                            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
-                            <line x1="1" y1="12" x2="4" y2="12" />
-                            <line x1="20" y1="12" x2="23" y2="12" />
-                            <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
-                            <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                    <svg viewBox="0 0 24 24" fill="none" class="theme-toggle-svg" xmlns="http://www.w3.org/2000/svg">
+                        <g class="standard-icons">
+                            <mask id="moon-mask">
+                                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                <circle cx="17" cy="7" r="9" fill="black" class="moon-mask-circle" />
+                            </mask>
+                            <circle cx="12" cy="12" r="10" fill="currentColor" mask="url(#moon-mask)" class="sun-moon-core" />
+                            <g class="sun-rays" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <line x1="12" y1="1" x2="12" y2="4" />
+                                <line x1="12" y1="20" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="4" y2="12" />
+                                <line x1="20" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                            </g>
+                        </g>
+                        <g class="xp-logo">
+                            <path d="M 2.5 5.5 Q 6.5 3.5 11 5.5 L 11 11.5 Q 6.5 9.5 2.5 11.5 Z" fill="#F05025" />
+                            <path d="M 12.5 6 Q 17.5 8.5 21.5 5.5 L 21.5 11.5 Q 17.5 14.5 12.5 11.5 Z" fill="#7FBA00" />
+                            <path d="M 2.5 12.5 Q 6.5 10.5 11 12.5 L 11 18.5 Q 6.5 16.5 2.5 18.5 Z" fill="#00A4EF" />
+                            <path d="M 12.5 13 Q 17.5 15.5 21.5 12.5 L 21.5 18.5 Q 17.5 21.5 12.5 18.5 Z" fill="#FFB900" />
                         </g>
                     </svg>
                     <span class="header-tooltip" id="theme-tooltip" data-i18n="theme_toggle_light">Switch to light mode</span>
@@ -760,6 +768,48 @@
                     <div id="modal-links" class="project-links"></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="spotify-floating-player" class="spotify-floating-player minimized">
+        <button class="player-toggle" id="player-toggle" aria-label="Maximize Player">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+                style="width: 32px; height: 32px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));">
+        </button>
+        <div class="player-content">
+            <a href="https://github.com/kittinan/spotify-github-profile" target="_blank">
+                <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31f2d7hsqyejjl23metzgwkyyu2q&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=false"
+                    alt="Spotify Status">
+            </a>
+        </div>
+    </div>
+    <div class="win7-taskbar">
+        <div class="taskbar-left">
+            <button class="win-start-orb" id="taskbar-theme-switch" aria-label="Start Menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="xp-logo">
+                    <path d="M 2.5 5.5 Q 6.5 3.5 11 5.5 L 11 11.5 Q 6.5 9.5 2.5 11.5 Z" fill="#F05025" />
+                    <path d="M 12.5 6 Q 17.5 8.5 21.5 5.5 L 21.5 11.5 Q 17.5 14.5 12.5 11.5 Z" fill="#7FBA00" />
+                    <path d="M 2.5 12.5 Q 6.5 10.5 11 12.5 L 11 18.5 Q 6.5 16.5 2.5 18.5 Z" fill="#00A4EF" />
+                    <path d="M 12.5 13 Q 17.5 15.5 21.5 12.5 L 21.5 18.5 Q 17.5 21.5 12.5 18.5 Z" fill="#FFB900" />
+                </svg>
+            </button>
+            <div class="taskbar-apps">
+                <a href="#top" class="taskbar-app">About</a>
+                <a href="#projects" class="taskbar-app">Projects</a>
+                <a href="#achievements" class="taskbar-app">Awards</a>
+                <a href="#contact" class="taskbar-app">Contact</a>
+            </div>
+        </div>
+        <div class="taskbar-right">
+            <div class="taskbar-tray">
+                <div class="taskbar-lang" id="taskbar-lang-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="BR" id="taskbar-flag">
+                </div>
+                <div class="taskbar-clock">
+                    <span id="win7-clock-time">12:00</span>
+                    <span id="win7-clock-date">07/04/2026</span>
+                </div>
+            </div>
+            <div class="show-desktop"></div>
         </div>
     </div>
     <script src="script.js"></script>

@@ -23,12 +23,20 @@ class I18nManager {
             if (typeof loadMusics === 'function') loadMusics();
             const langBtn = document.getElementById('lang-btn');
             const langSelector = document.querySelector('.lang-selector');
-            if (langBtn) {
-                langBtn.onclick = (e) => {
+            
+            const taskbarLangBtn = document.getElementById('taskbar-lang-btn');
+            if (taskbarLangBtn) {
+                taskbarLangBtn.onclick = (e) => {
                     e.stopPropagation();
-                    langSelector.classList.toggle('active');
+                    if (!this.data) return;
+                    
+                    const langs = this.data.languages;
+                    const currentIndex = langs.findIndex(l => l.id === this.currentLang);
+                    const nextIndex = (currentIndex + 1) % langs.length;
+                    this.setLanguage(langs[nextIndex].id);
                 };
             }
+
             window.onclick = () => {
                 if (langSelector) langSelector.classList.remove('active');
             };
@@ -68,9 +76,12 @@ class I18nManager {
     updateCurrentFlag() {
         if (!this.data) return;
         const currentFlag = document.getElementById('current-flag');
+        const taskbarFlag = document.getElementById('taskbar-flag');
         const langConfig = this.data.languages.find(l => l.id === this.currentLang);
-        if (currentFlag && langConfig) {
-            currentFlag.src = langConfig.flag;
+        
+        if (langConfig) {
+            if (currentFlag) currentFlag.src = langConfig.flag;
+            if (taskbarFlag) taskbarFlag.src = langConfig.flag;
         }
     }
     t(key) {
@@ -98,29 +109,91 @@ class ThemeManager {
             const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
             this.theme = prefersLight ? 'light' : 'dark';
         }
+        this.isRetro = localStorage.getItem('site-retro') === 'true';
         this.toggleBtn = document.getElementById('theme-switch');
         this.init();
     }
     init() {
         if (!this.toggleBtn) return;
         this.applyTheme();
-        this.toggleBtn.onclick = (e) => {
+        this.applyRetroTheme();
+        
+        const handleToggle = (e) => {
             e.stopPropagation();
             this.toggle();
         };
+        
+        const handleRetro = (e) => {
+            e.preventDefault();
+            this.toggleRetro();
+        };
+
+        this.toggleBtn.onclick = handleToggle;
+        this.toggleBtn.oncontextmenu = handleRetro;
+
+        
+        const taskbarToggle = document.getElementById('taskbar-theme-switch');
+        if (taskbarToggle) {
+            taskbarToggle.onclick = handleToggle;
+            taskbarToggle.oncontextmenu = handleRetro;
+        }
+
+        this.initWin7Clock();
     }
+    
+    initWin7Clock() {
+        const updateClock = () => {
+            const timeEl = document.getElementById('win7-clock-time');
+            const dateEl = document.getElementById('win7-clock-date');
+            if (!timeEl || !dateEl) return;
+            
+            const now = new Date();
+            timeEl.textContent = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+            dateEl.textContent = now.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        };
+        updateClock();
+        setInterval(updateClock, 1000);
+    }
+
     applyTheme() {
         if (this.theme === 'light') {
             document.body.classList.add('light-mode');
         } else {
             document.body.classList.remove('light-mode');
         }
+        this.updateCurrentFlag(); 
         this.updateTooltip();
     }
+    
+    updateCurrentFlag() {
+        if (window.i18n) {
+            i18n.updateCurrentFlag();
+            
+            const taskbarFlag = document.getElementById('taskbar-flag');
+            const mainFlag = document.getElementById('current-flag');
+            if (taskbarFlag && mainFlag) taskbarFlag.src = mainFlag.src;
+        }
+    }
     toggle() {
+        if (this.isRetro) {
+            this.toggleRetro();
+            return;
+        }
         this.theme = this.theme === 'dark' ? 'light' : 'dark';
         localStorage.setItem('site-theme', this.theme);
         this.applyTheme();
+    }
+    toggleRetro() {
+        this.isRetro = !this.isRetro;
+        localStorage.setItem('site-retro', this.isRetro);
+        this.applyRetroTheme();
+    }
+    applyRetroTheme() {
+        if (this.isRetro) {
+            document.body.classList.add('theme-1990');
+        } else {
+            document.body.classList.remove('theme-1990');
+        }
     }
     updateTooltip() {
         const tooltip = document.getElementById('theme-tooltip');
@@ -140,6 +213,7 @@ const smoothness = 0.08;
 let isScriptScrolling = false;
 let wheelTimer;
 document.addEventListener('wheel', function (event) {
+    if (themeManager.isRetro) return;
     event.preventDefault();
     isScriptScrolling = true;
     targetY += event.deltaY * 1.5;
@@ -151,12 +225,22 @@ document.addEventListener('wheel', function (event) {
     }, 500);
 }, { passive: false });
 window.addEventListener('scroll', () => {
-    if (!isScriptScrolling) {
+    if (themeManager.isRetro || !isScriptScrolling) {
         targetY = window.scrollY;
         currentY = window.scrollY;
     }
 });
 function animateScroll() {
+    if (themeManager.isRetro) {
+        
+        currentY = window.scrollY;
+        targetY = window.scrollY;
+        updateHorizontalStory();
+        updateProgressBar();
+        requestAnimationFrame(animateScroll);
+        return;
+    }
+
     if (Math.abs(targetY - currentY) > 0.1) {
         currentY += (targetY - currentY) * smoothness;
         window.scrollTo(0, currentY);
@@ -164,13 +248,17 @@ function animateScroll() {
     } else if (isScriptScrolling) {
         isScriptScrolling = false;
     }
+    updateProgressBar();
+    requestAnimationFrame(animateScroll);
+}
+
+function updateProgressBar() {
     const scrollProgressBar = document.getElementById('scroll-progress');
     if (scrollProgressBar) {
         const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = scrollRange > 0 ? (currentY / scrollRange) * 100 : 0;
+        const progress = scrollRange > 0 ? (window.scrollY / scrollRange) * 100 : 0;
         scrollProgressBar.style.width = `${progress}%`;
     }
-    requestAnimationFrame(animateScroll);
 }
 let hScrollCurrentX = 0;
 function updateHorizontalStory() {
@@ -958,3 +1046,27 @@ document.querySelectorAll('.header-right a, .btn-hero').forEach(anchor => {
         });
     });
 })();
+
+const playerContainer = document.getElementById('spotify-floating-player');
+const playerToggle = document.getElementById('player-toggle');
+
+if (playerToggle && playerContainer) {
+    const spotifyLogo = `<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" style="width: 32px; height: 32px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));">`;
+    const minusIcon = `<svg viewBox="0 0 24 24" fill="none" class="toggle-icon" style="width: 14px; height: 14px;"><path d="M6 12L18 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+
+    playerToggle.onclick = (e) => {
+        e.stopPropagation();
+        const isNowMinimized = playerContainer.classList.toggle('minimized');
+        playerToggle.innerHTML = isNowMinimized ? spotifyLogo : minusIcon;
+        playerToggle.setAttribute('aria-label', isNowMinimized ? 'Maximize Player' : 'Minimize Player');
+    };
+
+    setInterval(() => {
+        const img = playerContainer.querySelector('.player-content img');
+        if (img) {
+            const currentSrc = img.src;
+            const baseUrl = currentSrc.includes('&t=') ? currentSrc.split('&t=')[0] : currentSrc;
+            img.src = `${baseUrl}&t=${new Date().getTime()}`;
+        }
+    }, 5000);
+}
