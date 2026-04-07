@@ -1,6 +1,7 @@
 # 👋 opa, eu sou o deon
 ### i use fedora linux btw 🐧
 
+
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=2500&pause=1000&color=F59E0B&center=true&vCenter=true&width=500&lines=dunno+wthimdoing;linux+user;open+source+lover;building+cool+stuff" alt="Typing SVG" />
 </p>
@@ -13,6 +14,12 @@
 
 <p align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%23F59E0B" alt="Visitors" />
+</p>
+
+<p align="center">
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31f2d7hsqyejjl23metzgwkyyu2q&redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31f2d7hsqyejjl23metzgwkyyu2q&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true&profanity=false&bar_color=eb9824&bar_color_cover=false">
+  </a>
 </p>
 
 ---
