@@ -1,50 +1,86 @@
-# Opa, eu sou deon 👋
-## i use fedora linux btw 
+# 👋 opa, eu sou o deon
+### i use fedora linux btw 🐧
 
-![Profile Views](https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%23263759)
-<br>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=2500&pause=1000&color=F59E0B&center=true&vCenter=true&width=500&lines=dunno+wthimdoing;linux+user;open+source+lover;building+cool+stuff" alt="Typing SVG" />
+</p>
 
-[![Abrir Portfolio](https://img.shields.io/badge/Abrir%20Portfolio-000000?style=for-the-badge&logo=googledomains&logoColor=white)](https://adeondev.github.io/adeondev/)
+<p align="center">
+  <a href="https://adeondev.github.io/adeondev/">
+    <img src="https://img.shields.io/badge/portfolio-111111?style=for-the-badge&logo=vercel&logoColor=F59E0B" alt="Portfolio"/>
+  </a>
+</p>
 
----
-
-## 🚀 Sobre mim
-- 🔭 Trabalhando no **[Fyscat](https://github.com/adeondev/Gazin-Geral)**
-- 🔨 Desenvolvedor do **[Fiscal Gazin](https://github.com/adeondev/Gazin-Geral](https://github.com/sergioizidoro277/FECHAMENTO-FISCAL))**
-- 🪐 Dono do **[Pryzen](https://pryzen.space)**
-- 📫 Email: **deonsim24@gmail.com**
-
----
-
-## 🛠️ Linguagens que sei:
-
-<div>
-  <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua" />
-  <img src="https://img.shields.io/badge/Luau-00A2FF?style=for-the-badge&logo=lua&logoColor=white" alt="Luau" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
-</div>
-
-### ⏳ Estou aprendendo:
-<div>
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
-</div>
-
-### 🎯 Quero aprender:
-<div>
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-</div>
+<p align="center">
+  <img src="https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%23F59E0B" alt="Visitors" />
+</p>
 
 ---
 
-## 📊 Estatísticas
-
+## 🚀 sobre mim
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adeondev&theme=dracula&hide_border=true&bg_color=282a36" alt="Gráfico de Contribuições" />
+
+🔭 trabalhando no **[Fyscat](https://github.com/adeondev/Gazin-Geral)** 🔨 dev do **[Fiscal Gazin](https://github.com/sergioizidoro277/FECHAMENTO-FISCAL)** 🪐 criador do **[Pryzen](https://pryzen.space)** 📫 **deonsim24@gmail.com**
+
 </div>
+
+---
+
+## 🧠 frontend
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="42" alt="HTML5"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="42" alt="CSS3"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="42" alt="JavaScript"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="42" alt="React"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="42" alt="Next.js"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" height="42" alt="Vite"/>
+</p>
+
+---
+
+## ⚙️ backend
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="42" alt="PHP"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="42" alt="Python"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="42" alt="PostgreSQL"/>
+</p>
+
+---
+
+## 🧩 scripting
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" height="42" alt="Lua"/>
+</p>
+
+---
+
+## 📚 aprendendo
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" height="42" alt="Rust"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="42" alt="Java"/>
+</p>
+
+---
+
+## 🐳 ferramentas & devops
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="42" alt="Docker"/>
+</p>
+
+---
+
+## 📊 stats
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=adeondev&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adeondev&bg_color=1a1b27&color=F59E0B&line=F59E0B&point=FFFFFF&area=true&hide_border=true" alt="Activity Graph"/>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,100:F59E0B&height=120&section=footer" alt="Footer Wave"/>
+</p>
