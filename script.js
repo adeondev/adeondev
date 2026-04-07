@@ -23,6 +23,12 @@ class I18nManager {
             if (typeof loadMusics === 'function') loadMusics();
             const langBtn = document.getElementById('lang-btn');
             const langSelector = document.querySelector('.lang-selector');
+            if (langBtn) {
+                langBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    langSelector?.classList.toggle('active');
+                };
+            }
             
             const taskbarLangBtn = document.getElementById('taskbar-lang-btn');
             if (taskbarLangBtn) {
@@ -403,25 +409,34 @@ function handleActiveNav() {
 window.addEventListener('scroll', handleActiveNav);
 handleActiveNav();
 const typewriterElement = document.getElementById('typewriter');
-let k = 0;
-let typewriterInterval;
+let typewriterRequestId = 0;
+
 function restartTypewriter() {
     if (!typewriterElement) return;
-    clearInterval(typewriterInterval);
+    
+    typewriterRequestId++;
+    const currentRequestId = typewriterRequestId;
+    
     typewriterElement.textContent = "";
-    k = 0;
     const fullText = i18n.t('typewriter');
+    const highlightTarget = "Deon";
+    const highlightStart = fullText.indexOf(highlightTarget);
+    const highlightEnd = highlightStart !== -1 ? highlightStart + highlightTarget.length - 1 : -1;
+    let k = 0;
+
     function type() {
+        if (currentRequestId !== typewriterRequestId) return;
+        
         if (k < fullText.length) {
             const char = fullText.charAt(k);
             const span = document.createElement('span');
             span.classList.add('letter');
             span.textContent = char;
-            const isHi = (i18n.currentLang === 'pt' && k >= 12 && k <= 15) ||
-                (i18n.currentLang === 'en' && k >= 8 && k <= 11);
-            if (isHi) {
+            
+            if (highlightStart !== -1 && k >= highlightStart && k <= highlightEnd) {
                 span.classList.add('highlight');
             }
+            
             typewriterElement.appendChild(span);
             k++;
             setTimeout(type, 23);
