@@ -100,7 +100,9 @@
             "contact_title": "Contato",
             "contact_intro": "Gostou do meu trabalho ou quer trocar uma ideia? Me chama em qualquer uma das plataformas abaixo!",
             "contact_other_platforms": "Outras plataformas",
-            "contact_copied": "Copiado!"
+            "contact_copied": "Copiado!",
+            "theme_toggle_light": "Mudar para modo claro",
+            "theme_toggle_dark": "Mudar para modo escuro"
         },
         "en": {
             "brand": "eusoudeon",
@@ -180,7 +182,9 @@
             "contact_title": "Contact",
             "contact_intro": "Liked my work or want to chat? Reach out to me on any of the platforms below!",
             "contact_other_platforms": "Other platforms",
-            "contact_copied": "Copied!"
+            "contact_copied": "Copied!",
+            "theme_toggle_light": "Switch to light mode",
+            "theme_toggle_dark": "Switch to dark mode"
         },
         "es": {
             "brand": "eusoudeon",
@@ -260,7 +264,9 @@
             "contact_title": "Contacto",
             "contact_intro": "¿Te gustó mi trabajo o quieres charlar? ¡Contáctame en cualquiera de las plataformas a continuación!",
             "contact_other_platforms": "Otras plataformas",
-            "contact_copied": "¡Copiado!"
+            "contact_copied": "¡Copiado!",
+            "theme_toggle_light": "Cambiar a modo claro",
+            "theme_toggle_dark": "Cambiar a modo oscuro"
         },
         "it": {
             "brand": "eusoudeon",
@@ -340,7 +346,9 @@
             "contact_title": "Contatti",
             "contact_intro": "Ti è piaciuto il mio lavoro o vuoi fare due chiacchiere? Contattami su una qualsiasi delle piattaforme qui sotto!",
             "contact_other_platforms": "Altre piattaforme",
-            "contact_copied": "Copiato!"
+            "contact_copied": "Copiato!",
+            "theme_toggle_light": "Passa alla modalità chiara",
+            "theme_toggle_dark": "Passa alla modalità scura"
         }
     }
 }

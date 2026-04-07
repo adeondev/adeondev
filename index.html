@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&family=Manrope:wght@300;500;700&family=Orbitron:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <div id="scroll-progress" class="scroll-progress-bar"></div>
-
     <header class="main-header pre-load">
         <div class="header-container">
             <div class="header-left">
@@ -25,10 +22,28 @@
                         <img id="current-flag" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="BR">
                         <span class="lang-arrow">⌄</span>
                     </button>
-                    <ul class="lang-dropdown" id="lang-menu">
-
-                    </ul>
+                    <ul class="lang-dropdown" id="lang-menu"></ul>
                 </div>
+                <button class="theme-toggle" id="theme-switch" aria-label="Alterar tema">
+                    <svg viewBox="0 0 24 24" fill="none" class="theme-toggle-svg">
+                        <mask id="moon-mask">
+                            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                            <circle cx="17" cy="7" r="9" fill="black" class="moon-mask-circle" />
+                        </mask>
+                        <circle cx="12" cy="12" r="10" fill="currentColor" mask="url(#moon-mask)" class="sun-moon-core" />
+                        <g class="sun-rays" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <line x1="12" y1="1" x2="12" y2="4" />
+                            <line x1="12" y1="20" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="4" y2="12" />
+                            <line x1="20" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                            <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                        </g>
+                    </svg>
+                    <span class="header-tooltip" id="theme-tooltip" data-i18n="theme_toggle_light">Switch to light mode</span>
+                </button>
             </div>
             <nav class="header-right">
                 <a href="#top"><img src="images/icons/inicio.svg" alt="Start" class="nav-icon"><span
@@ -55,7 +70,6 @@
             </div>
         </div>
     </header>
-
     <div class="mobile-menu-overlay" id="mobile-menu">
         <div class="mobile-menu-content">
             <a href="#top" class="mobile-link" data-i18n="nav_start">Start</a>
@@ -68,15 +82,12 @@
             <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact</a>
         </div>
     </div>
-
     <canvas id="matrix-canvas"></canvas>
     <canvas id="trail-canvas"></canvas>
-
     <div class="presentation" id="top">
         <div class="presentation-text">
             <h1 id="typewriter"></h1>
             <p class="subtitle" data-i18n="hero_subtitle">Um "developer" que diz fazer coisas, mas na verdade não faz nada.</p>
-
             <div class="hero-footer">
                 <div class="hero-btns">
                     <a href="#about" class="btn-hero btn-filled" data-i18n="btn_about">about me</a>
@@ -90,20 +101,17 @@
                 <svg class="pfp-border" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="48"></circle>
                 </svg>
-                <img src="images/pfp.jpg" alt="Foto do Deon" class="profile-photo">
+                <img src="https://avatars.githubusercontent.com/u/265530670?v=4" alt="Foto do Deon" class="profile-photo">
             </div>
         </div>
     </div>
-
     <div id="scroll-indicator">
         <span data-i18n="scroll_indicator">Scroll to see more information</span>
         <img src="images/icons/scroll.svg" alt="" class="scroll-icon">
     </div>
-
     <section id="about" class="section-about">
         <div class="container-about">
             <h2 class="section-title" data-i18n="about_title">About Me</h2>
-
             <div class="about-grid">
                 <div class="about-text-content">
                     <p data-i18n="about_p1">Desde que me entendo por gente, a tecnologia faz parte da minha vida. Comecei minha jornada há
@@ -113,20 +121,16 @@
                         desenvolvimento, embora ainda não me considere um fullstack. Estou em constante evolução,
                         aprimorando minhas habilidades passo a passo, com um objetivo claro: me tornar um Game
                         Developer, um sonho que carrego desde a infância.</p>
-
                     <blockquote class="quote-linus">
                         <p>“Talk is cheap. Show me the code.”</p>
                         <span>— Linus Torvalds</span>
                     </blockquote>
-
                     <p class="practical-note"><i data-i18n="about_practical">(E é exatamente isso que eu tento fazer todos os dias: aprender,
                             construir e provar na prática.)</i></p>
-
                     <p data-i18n="about_p3">No futuro, pretendo aprofundar meus conhecimentos em C++, Rust e Java, buscando não apenas
                         domínio técnico, mas também uma base sólida para desenvolver aplicações mais performáticas,
                         seguras e escaláveis, especialmente no universo de desenvolvimento de jogos.</p>
                 </div>
-
                 <div class="about-cards">
                     <div class="card-info">
                         <h3 data-i18n="card_obj_t">Objetivo</h3>
@@ -147,17 +151,14 @@
             </div>
         </div>
     </section>
-
     <section id="tools" class="section-tools">
         <div class="container-tools">
             <h2 class="tools-title" data-i18n="tools_title">Tools & Software</h2>
-
             <div class="tools-selector">
                 <button class="tab-btn active" data-tab="software" data-i18n="tab_software">Software</button>
                 <button class="tab-btn" data-tab="tools-tab" data-i18n="tab_tools">Tools</button>
                 <button class="tab-btn" data-tab="languages-tab" data-i18n="tab_languages">Languages</button>
             </div>
-
             <div class="tools-nav-wrapper">
                 <button class="nav-arrow prev" id="prevTab" aria-label="Aba anterior">
                     <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
@@ -165,10 +166,8 @@
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-
                 <div class="tools-content">
                     <div class="tools-wrapper">
-
                         <div class="tab-content active" id="software">
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_home">// Em casa</h4>
@@ -208,7 +207,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_office">// No escritório</h4>
                                 <div class="software-grid">
@@ -237,7 +235,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="tab-content" id="tools-tab">
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_code">// Código</h4>
@@ -289,7 +286,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_design">// Design</h4>
                                 <div class="software-grid">
@@ -339,7 +335,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_others">// Outros</h4>
                                 <div class="software-grid">
@@ -357,9 +352,7 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="tab-content" id="languages-tab">
-
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_learned">// Linguagens que sei</h4>
                                 <div class="software-grid">
@@ -455,7 +448,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_learning">// Estou aprendendo</h4>
                                 <div class="software-grid">
@@ -481,7 +473,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div class="tools-category">
                                 <h4 class="category-title" data-i18n="cat_want_learn">// Quero aprender</h4>
                                 <div class="software-grid">
@@ -510,7 +501,6 @@
                         </div>
                     </div>
                 </div>
-
                 <button class="nav-arrow next" id="nextTab" aria-label="Próxima aba">
                     <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -520,7 +510,6 @@
             </div>
         </div>
     </section>
-
     <section id="achievements" class="section-achievements section-about">
         <div class="container-about">
             <h2 class="section-title" data-i18n="ach_title">Achievements</h2>
@@ -549,7 +538,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-card">
@@ -564,12 +552,10 @@
                         </a>
                     </div>
                 </div>
-
                 <p class="practical-note timeline-footer"><i data-i18n="ach_footer">Refletindo minha melhora na área de tecnologia.</i></p>
             </div>
         </div>
     </section>
-
     <section id="projects" class="section-projects section-about">
         <div class="container-about">
             <h2 class="section-title" data-i18n="projects_title">Projects</h2>
@@ -597,7 +583,6 @@
                         <span data-i18n="proj_tab_tutorials">Tutoriais</span>
                     </button>
                 </aside>
-
                 <main class="projects-display">
                     <div id="project-category-title" class="project-category-title">Web</div>
                     <div id="project-grid" class="project-grid"></div>
@@ -605,29 +590,23 @@
             </div>
         </div>
     </section>
-
     <section id="musics" class="section-musics section-about">
-
         <div id="music-particles" class="particles-container"></div>
-
         <div class="container-about">
             <h2 class="section-title" data-i18n="musics_title">Musics</h2>
             <div class="about-text-content">
                 <p data-i18n="musics_intro">Artistas e músicas que eu não paro de ouvir:</p>
             </div>
-
             <div class="musics-container">
                 <nav class="musics-nav tools-selector">
                     <button class="music-tab tab-btn active" data-music="artists" data-i18n="music_tab_artists">Favorite Artists</button>
                     <button class="music-tab tab-btn" data-music="songs" data-i18n="music_tab_songs">Favorite Songs</button>
                 </nav>
-
                 <main class="musics-display">
                     <div id="music-grid" class="music-grid"></div>
                 </main>
             </div>
         </div>
-
         <div class="vinyl-wrapper">
             <div class="vinyl-container">
                 <div class="shine-overlay"></div>
@@ -650,15 +629,12 @@
             </div>
         </div>
     </section>
-
     <section id="horizontal-story" class="section-horizontal">
         <div class="h-story-sticky">
             <div class="h-story-header">
                 <h2 class="section-title" data-i18n="story_title">Personal Interests</h2>
             </div>
-
             <div class="h-story-track">
-
                 <div class="h-story-panel panel-1">
                     <div class="h-panel-content">
                         <div class="h-panel-text">
@@ -678,7 +654,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="h-story-panel panel-2 reverse">
                     <div class="h-panel-content">
                         <div class="h-panel-text">
@@ -694,7 +669,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="h-story-panel panel-3">
                     <div class="h-panel-content">
                         <div class="h-panel-text">
@@ -712,49 +686,40 @@
                     </div>
                 </div>
             </div>
-
             <div class="h-story-progress">
                 <div class="h-progress-bar"></div>
             </div>
         </div>
     </section>
-
     <section id="contact" class="section-contact section-about section-projects">
         <div class="container-about">
             <h2 class="section-title" data-i18n="contact_title">Contact</h2>
             <div class="about-text-content">
                 <p data-i18n="contact_intro">Gostou do meu trabalho ou quer trocar uma ideia? Me chama em qualquer uma das plataformas abaixo!</p>
             </div>
-
             <div class="contact-row">
-
                 <a href="https://github.com/adeondev" target="_blank" class="contact-icon-link">
                     <img src="https://cdn.simpleicons.org/github/fdb82c" alt="GitHub" class="contact-icon-img">
                     <span class="contact-tooltip">/adeondev</span>
                 </a>
-
                 <a href="mailto:deonsim24@gmail.com" class="contact-icon-link">
                     <img src="https://cdn.simpleicons.org/gmail/fdb82c" alt="Email" class="contact-icon-img">
                     <span class="contact-tooltip">deonsim24@gmail.com</span>
                 </a>
-
                 <div class="contact-icon-link discord-copy" data-copy="@uhhdeon">
                     <img src="https://cdn.simpleicons.org/discord/fdb82c" alt="Discord" class="contact-icon-img">
                     <span class="contact-tooltip">@uhhdeon</span>
                 </div>
-
                 <a href="https://www.instagram.com/uhhdeon/" target="_blank" class="contact-icon-link">
                     <img src="https://cdn.simpleicons.org/instagram/fdb82c" alt="Instagram" class="contact-icon-img">
                     <span class="contact-tooltip">uhhdeon</span>
                 </a>
-
                 <a href="mailto:deonsim24@gmail.com" class="contact-icon-link">
                     <img src="https://www.svgrepo.com/show/333577/microsoft-teams.svg" alt="Teams"
                         class="contact-icon-img teams-icon">
                     <span class="contact-tooltip">deonsim24@gmail.com</span>
                 </a>
             </div>
-
             <div class="contact-others">
                 <h3 class="contact-others-title" data-i18n="contact_other_platforms">Other platforms</h3>
                 <div class="contact-row others-row">
@@ -782,7 +747,6 @@
             </div>
         </div>
     </section>
-
     <div id="project-modal" class="project-modal">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
@@ -798,9 +762,6 @@
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
