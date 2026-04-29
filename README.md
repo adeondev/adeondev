@@ -47,6 +47,14 @@
   </a>
 </p>
 
+### 📱 o que uso
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=linux,redhat,robloxstudio,vscode,idea,github,git,figma,ai,ps,discord,supabase&perline=6" alt="Other Skills" />
+  </a>
+</p>
+
+
 ---
 
 ## 📊 github stats
