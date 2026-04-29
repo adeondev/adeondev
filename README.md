@@ -2,14 +2,14 @@
 ### i use fedora linux btw 🐧
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=2500&pause=1000&color=F59E0B&center=true&vCenter=true&width=500&lines=dunno+wthimdoing;linux+user;open+source+lover;building+cool+stuff" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=2500&pause=1000&color=FFFFFF&center=true&vCenter=true&width=500&lines=dunno+wthimdoing;linux+user;open+source+lover;building+cool+stuff" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <a href="https://adeondev.github.io/adeondev/">
-    <img src="https://img.shields.io/badge/portfolio-111111?style=for-the-badge&logo=vercel&logoColor=F59E0B" alt="Portfolio"/>
+    <img src="https://img.shields.io/badge/portfolio-111111?style=for-the-badge&logo=vercel&logoColor=FFFFFF" alt="Portfolio"/>
   </a>
-  <img src="https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%23F59E0B" alt="Visitors" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=adeondev&countColor=%FFFFFF" alt="Visitors" />
 </p>
 
 ---
@@ -66,11 +66,11 @@
 <br>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adeondev&bg_color=1a1b27&color=F59E0B&line=F59E0B&point=FFFFFF&area=true&hide_border=true" alt="Activity Graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adeondev&bg_color=1a1b27&color=FFFFFF&line=F59E0B&point=FFFFFF&area=true&hide_border=true" alt="Activity Graph"/>
 </div>
 
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,100:F59E0B&height=120&section=footer" alt="Footer Wave"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,100:FFFFFF&height=120&section=footer" alt="Footer Wave"/>
 </p>
