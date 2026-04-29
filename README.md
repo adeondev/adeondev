@@ -19,6 +19,7 @@
 * 🔭 **Atualmente trabalhando no:** [Fyscat](https://github.com/adeondev/Gazin-Geral)
 * 🔨 **Desenvolvedor no:** [Fiscal Gazin](https://github.com/sergioizidoro277/FECHAMENTO-FISCAL)
 * 🪐 **Criador do:** [Pryzen](https://pryzen.space)
+* 🧩 **Extensões:** [K-Room](https://github.com/adeondev/k-room-yt-music)
 * 📫 **Contato:** deonsim24@gmail.com
 
 ---
