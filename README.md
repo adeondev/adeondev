@@ -43,7 +43,7 @@
 ### 🛠️ outras linguagens, devops e aprendizado
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=lua,docker,rust,java&perline=6" alt="Other Skills" />
+    <img src="https://skillicons.dev/icons?i=lua,docker,rust,java,kotlin&perline=6" alt="Other Skills" />
   </a>
 </p>
 
