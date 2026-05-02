@@ -347,8 +347,8 @@ window.addEventListener('resize', throttle(initMatrix, 200));
 function drawMatrix() {
     mCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     const glowGradient = mCtx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 500);
-    const accentColor = themeManager.theme === 'dark' ? 'rgba(253, 184, 44, 0.05)' : 'rgba(253, 184, 44, 0.15)';
-    const bgColor = themeManager.theme === 'dark' ? 'rgba(9, 6, 4, 0)' : 'rgba(255, 255, 255, 0)';
+    const accentColor = themeManager.theme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.12)';
+    const bgColor = themeManager.theme === 'dark' ? 'rgba(14, 14, 14, 0)' : 'rgba(255, 255, 255, 0)';
     glowGradient.addColorStop(0, accentColor);
     glowGradient.addColorStop(1, bgColor);
     mCtx.fillStyle = glowGradient;
@@ -367,7 +367,7 @@ function drawMatrix() {
             tCtx.lineTo(p2.x, p2.y);
             const ratio = i / trail.length;
             const trailOpacity = themeManager.theme === 'dark' ? 0.4 : 0.6;
-            tCtx.strokeStyle = `rgba(253, 184, 44, ${ratio * trailOpacity})`;
+            tCtx.strokeStyle = `rgba(255, 255, 255, ${ratio * trailOpacity})`;
             tCtx.lineWidth = Math.max(0.5, ratio * 3);
             tCtx.lineCap = 'round';
             tCtx.stroke();
@@ -385,7 +385,7 @@ window.addEventListener('scroll', () => {
 });
 function handleActiveNav() {
     const navLinks = document.querySelectorAll('.header-right a');
-    const sections = ['#top', '#about', '#tools', '#achievements', '#projects', '#musics', '#horizontal-story', '#contact'];
+    const sections = ['#top', '#about', '#tools', '#achievements', '#projects', '#kroom', '#musics', '#horizontal-story', '#contact'];
     let currentSection = "";
     sections.forEach(selector => {
         const section = document.querySelector(selector);
@@ -611,7 +611,7 @@ function renderProjects(category, targetGrid = null, showAll = false) {
             } else {
                 item.className = 'project-item';
                 item.innerHTML = `
-                    <img src="${proj.image}" alt="${proj.name}" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1a1512/fdb82c?text=${proj.name}'">
+                    <img src="${proj.image}" alt="${proj.name}" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/161b22/ffffff?text=${proj.name}'">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h3>${proj.name}</h3>
@@ -664,7 +664,7 @@ function openModal(proj, category = 'web') {
     if (!modal) return;
     const isRoblox = category === 'roblox';
     const isScratch = category === 'scratch';
-    modal.style.setProperty('--modal-primary', proj.color || '#fdb82c');
+    modal.style.setProperty('--modal-primary', proj.color || '#ffffff');
     modal.style.setProperty('--modal-font', proj.font || "'Dancing Script', cursive");
     const mImg = document.getElementById('modal-img');
     mImg.src = proj.image;

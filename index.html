@@ -64,6 +64,8 @@
                         class="header-tooltip" data-i18n="nav_achievements">Achievements</span></a>
                 <a href="#projects"><img src="images/icons/projetos.svg" alt="Projects" class="nav-icon"><span
                         class="header-tooltip" data-i18n="nav_projects">Projects</span></a>
+                <a href="#kroom"><img src="images/icons/musicas.svg" alt="K-ROOM" class="nav-icon"><span
+                        class="header-tooltip" data-i18n="nav_kroom">K-ROOM</span></a>
                 <a href="#musics"><img src="images/icons/musicas.svg" alt="Musics" class="nav-icon"><span
                         class="header-tooltip" data-i18n="nav_musics">Musics</span></a>
                 <a href="#horizontal-story"><img src="images/icons/gostos%20pessoas.svg" alt="Personal Interests"
@@ -85,6 +87,7 @@
             <a href="#tools" class="mobile-link" data-i18n="nav_tools">Tools</a>
             <a href="#achievements" class="mobile-link" data-i18n="nav_achievements">Achievements</a>
             <a href="#projects" class="mobile-link" data-i18n="nav_projects">Projects</a>
+            <a href="#kroom" class="mobile-link" data-i18n="nav_kroom">K-ROOM</a>
             <a href="#musics" class="mobile-link" data-i18n="nav_musics">Musics</a>
             <a href="#horizontal-story" class="mobile-link" data-i18n="nav_personality">Personality</a>
             <a href="#contact" class="mobile-link" data-i18n="nav_contact">Contact</a>
@@ -120,6 +123,11 @@
     <section id="about" class="section-about">
         <div class="container-about">
             <h2 class="section-title" data-i18n="about_title">About Me</h2>
+            <div class="law-strip" aria-hidden="true">
+                <img src="https://raw.githubusercontent.com/adeondev/adeondev/main/images/law1.jpg" alt="" class="law-img" loading="lazy">
+                <img src="https://raw.githubusercontent.com/adeondev/adeondev/main/images/law2.jpg" alt="" class="law-img" loading="lazy">
+                <img src="https://raw.githubusercontent.com/adeondev/adeondev/main/images/law3.jpg" alt="" class="law-img" loading="lazy">
+            </div>
             <div class="about-grid">
                 <div class="about-text-content">
                     <p data-i18n="about_p1">Desde que me entendo por gente, a tecnologia faz parte da minha vida. Comecei minha jornada há
@@ -598,6 +606,59 @@
             </div>
         </div>
     </section>
+    <section id="kroom" class="section-kroom section-about">
+        <div class="container-about">
+            <h2 class="section-title" data-i18n="kroom_title">K-ROOM</h2>
+            <div class="about-text-content">
+                <p data-i18n="kroom_intro">Uma extensão minimalista de navegador que estabiliza o volume no YouTube Music usando a Web Audio API. Funciona como compressor e limitador em tempo real, equilibrando o áudio entre faixas baixas e altas sem distorção.</p>
+            </div>
+            <div class="kroom-grid">
+                <div class="kroom-hero card-info">
+                    <img src="https://raw.githubusercontent.com/adeondev/k-room-yt-music/main/icons/icon.png" alt="K-ROOM" class="kroom-logo" onerror="this.src='images/icons/musicas.svg'">
+                    <div class="kroom-hero-info">
+                        <h3>K-ROOM</h3>
+                        <p class="kroom-tagline" data-i18n="kroom_tagline">// browser extension</p>
+                        <div class="kroom-actions">
+                            <a href="https://github.com/adeondev/k-room-yt-music" target="_blank" class="btn-play">
+                                <span data-i18n="kroom_btn_source">Source</span>
+                                <img src="images/icons/redirect.svg" alt="" class="btn-icon">
+                            </a>
+                            <a href="https://music.youtube.com/" target="_blank" class="btn-play">
+                                <span data-i18n="kroom_btn_try">YT Music</span>
+                                <img src="images/icons/redirect.svg" alt="" class="btn-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="kroom-features">
+                    <div class="card-info">
+                        <h3 data-i18n="kroom_f1_t">Compressor & Limiter</h3>
+                        <p data-i18n="kroom_f1_d">Controla a dinâmica das faixas para evitar clipping e equilibrar o volume.</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="kroom_f2_t">Auto-Gain</h3>
+                        <p data-i18n="kroom_f2_d">Equaliza a percepção de volume entre faixas diferentes.</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="kroom_f3_t">Smart Mode</h3>
+                        <p data-i18n="kroom_f3_d">Detecta automaticamente se a música é muito comprimida ou dinâmica e ajusta na hora.</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="kroom_f4_t">Highpass Filter</h3>
+                        <p data-i18n="kroom_f4_d">Remove ruídos indesejados de sub-baixos (&lt; 30 Hz).</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="kroom_f5_t">Pitch Black UI</h3>
+                        <p data-i18n="kroom_f5_d">Interface escura combinando com o layout do YouTube.</p>
+                    </div>
+                    <div class="card-info">
+                        <h3 data-i18n="kroom_f6_t">i18n</h3>
+                        <p data-i18n="kroom_f6_d">Disponível em inglês e português (pt-BR).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="musics" class="section-musics section-about">
         <div id="music-particles" class="particles-container"></div>
         <div class="container-about">
@@ -707,19 +768,19 @@
             </div>
             <div class="contact-row">
                 <a href="https://github.com/adeondev" target="_blank" class="contact-icon-link">
-                    <img src="https://cdn.simpleicons.org/github/fdb82c" alt="GitHub" class="contact-icon-img">
+                    <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="contact-icon-img">
                     <span class="contact-tooltip">/adeondev</span>
                 </a>
                 <a href="mailto:deonsim24@gmail.com" class="contact-icon-link">
-                    <img src="https://cdn.simpleicons.org/gmail/fdb82c" alt="Email" class="contact-icon-img">
+                    <img src="https://cdn.simpleicons.org/gmail/ffffff" alt="Email" class="contact-icon-img">
                     <span class="contact-tooltip">deonsim24@gmail.com</span>
                 </a>
                 <div class="contact-icon-link discord-copy" data-copy="@uhhdeon">
-                    <img src="https://cdn.simpleicons.org/discord/fdb82c" alt="Discord" class="contact-icon-img">
+                    <img src="https://cdn.simpleicons.org/discord/ffffff" alt="Discord" class="contact-icon-img">
                     <span class="contact-tooltip">@uhhdeon</span>
                 </div>
                 <a href="https://www.instagram.com/uhhdeon/" target="_blank" class="contact-icon-link">
-                    <img src="https://cdn.simpleicons.org/instagram/fdb82c" alt="Instagram" class="contact-icon-img">
+                    <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" class="contact-icon-img">
                     <span class="contact-tooltip">uhhdeon</span>
                 </a>
                 <a href="mailto:deonsim24@gmail.com" class="contact-icon-link">
@@ -736,15 +797,15 @@
                         <span class="contact-tooltip">Roblox</span>
                     </a>
                     <a href="https://steamcommunity.com/id/eusoudeon/" target="_blank" class="contact-icon-link">
-                        <img src="https://cdn.simpleicons.org/steam/fdb82c" alt="Steam" class="contact-icon-img">
+                        <img src="https://cdn.simpleicons.org/steam/ffffff" alt="Steam" class="contact-icon-img">
                         <span class="contact-tooltip">Steam</span>
                     </a>
                     <a href="https://open.spotify.com/user/31f2d7hsqyejjl23metzgwkyyu2q?si=b89ec5296c8a40d7" target="_blank" class="contact-icon-link">
-                        <img src="https://cdn.simpleicons.org/spotify/fdb82c" alt="Spotify" class="contact-icon-img">
+                        <img src="https://cdn.simpleicons.org/spotify/ffffff" alt="Spotify" class="contact-icon-img">
                         <span class="contact-tooltip">Spotify</span>
                     </a>
                     <a href="https://www.tiktok.com/" target="_blank" class="contact-icon-link">
-                        <img src="https://cdn.simpleicons.org/tiktok/fdb82c" alt="Tiktok" class="contact-icon-img">
+                        <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="Tiktok" class="contact-icon-img">
                         <span class="contact-tooltip">Tiktok</span>
                     </a>
                     <a href="https://www.youtube.com/@eusoudeon" target="_blank" class="contact-icon-link">
