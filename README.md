@@ -58,6 +58,30 @@ fato_curioso: 2x campeão do agrinho 🏆
 <br/>
 
 <div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=ffffff&height=44&text=%20currently%20working%20on%20&fontColor=0d1117&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
+</div>
+
+<br/>
+
+<div align="center">
+
+<a href="./fnf_preview.mp4">
+  <img src="./preview.gif" width="90%" alt="fnf preview"/>
+</a>
+
+<br/><br/>
+
+### gettin' engine
+rhythm game • multiplayer • custom engine
+
+</div>
+
+<br/>
+
+
+<br/>
+
+<div align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=ffffff&height=44&text=%20tecnologias%20&fontColor=0d1117&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
 </div>
 
