@@ -1,8 +1,6 @@
 <div align="center">
 
-# opa, eu sou o deon
-
-**dev brasileiro • fedora linux • criando projetos próprios**
+# opa, eu sou deon
 
 <br/>
 
