@@ -1,145 +1,103 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:4c1d95,100:7c3aed&height=220&section=header&text=opa,%20eu%20sou%20o%20deon&fontSize=28&fontColor=ffffff&font=Press+Start+2P&animation=fadeIn&fontAlignY=38&desc=fedora%20linux%20%E2%80%A2%20pixel%20art%20%E2%80%A2%20ricing%20addict&descAlignY=58&descSize=14" alt="header" />
+# opa, eu sou o deon
+
+**dev brasileiro • fedora linux • criando projetos próprios**
 
 <br/>
 
 <a href="https://github.com/adeondev">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&weight=400&size=14&duration=2800&pause=900&color=A78BFA&center=true&vCenter=true&width=620&lines=%24+whoami;%3E+linux+enthusiast;%3E+open+source+lover;%3E+pixel+art+%26+ricing+addict;%3E+building+cool+stuff" alt="typing" />
+  <img src="https://img.shields.io/badge/github-adeondev-7c3aed?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" />
+</a>
+<a href="mailto:deonsim24@gmail.com">
+  <img src="https://img.shields.io/badge/email-contato-7c3aed?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" />
+</a>
+<a href="https://adeondev.github.io/adeondev/">
+  <img src="https://img.shields.io/badge/portfolio-site-7c3aed?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117" />
 </a>
 
-<br/>
-
-<a href="https://adeondev.github.io/adeondev/"><img src="https://img.shields.io/badge/-portfólio-7c3aed?style=for-the-badge&logo=vercel&logoColor=ffffff&labelColor=4c1d95" /></a>
-<a href="mailto:deonsim24@gmail.com"><img src="https://img.shields.io/badge/-contato-7c3aed?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=4c1d95" /></a>
-<a href="https://pryzen.space"><img src="https://img.shields.io/badge/-pryzen-7c3aed?style=for-the-badge&logo=react&logoColor=ffffff&labelColor=4c1d95" /></a>
-<img src="https://komarev.com/ghpvc/?username=adeondev&label=visitas&color=7c3aed&style=for-the-badge" />
-
 </div>
 
-<br/>
+---
 
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=7c3aed&height=44&text=%20sobre%20mim%20&fontColor=ffffff&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
-</div>
+## sobre mim
 
 ```yaml
-nome:          deon
-localização:   brasil 🇧🇷
-sistema:       fedora linux 🐧
-shell:         kitty + alacritty + gnome terminal
-editor:        vscode + neovim + antigravity
-fazendo:
-  - construindo: AZSMP, Fyscat
-  - aprendendo:  rust + system design
-  - curtindo:    kotlin / c#
-fato_curioso: 2x campeão do agrinho 🏆
+nome: deon
+país: brasil
+sistema: fedora, windows
+sonho: gamedev
+estudando: rust, system design
+fato: 2x campeão do agrinho
 ```
 
-- 🪐 **Criador do** [`Pryzen`](https://pryzen.space)
-- 🔭 **Trabalhando em** [`Fyscat`](https://github.com/adeondev/Gazin-Geral) e **AZSMP**
-- 🔨 **Dev no** [`Fiscal Gazin`](https://github.com/sergioizidoro277/FECHAMENTO-FISCAL)
-- 🧩 **Extensão** [`K-Room`](https://github.com/adeondev/k-room-yt-music) — YouTube Music vibes
-- 🏆 **2x Campeão Agrinho** — [scratch profile](https://scratch.mit.edu/users/eusougabriel/)
-- 📫 **Contato:** [`deonsim24@gmail.com`](mailto:deonsim24@gmail.com)
+---
 
-<br/>
+## projetos
 
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=7c3aed&height=44&text=%20currently%20working%20on%20&fontColor=ffffff&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
-</div>
+| projeto            | descrição                                             | stack                                 |
+| ------------------ | ----------------------------------------------------- | ------------------------------------- |
+| **Fyscat**         | sistema interno para controle e organização fiscal    | React, TypeScript, Supabase, Tailwind |
+| **AZSMP**          | servidor/projeto Minecraft com sistemas próprios      | Kotlin, plugins, Supabase             |
+| **Pryzen**         | projeto pessoal de tecnologia e identidade visual     | Web, design, experimentos             |
+| **K-Room**         | extensão para melhorar a experiência no YouTube Music | JavaScript, Web Audio API             |
+| **Gettin' Engine** | engine/projeto de jogo de ritmo no roblox             | LuaU                                  |
 
-<br/>
+---
 
-<div align="center">
-
-<a href="./fnf_preview.mp4">
-  <img src="./preview.gif" width="90%" alt="fnf preview"/>
-</a>
-
-<br/><br/>
-
-### gettin' engine
-rhythm game • multiplayer • custom engine
-
-</div>
-
-<br/>
-
-
-<br/>
-
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=7c3aed&height=44&text=%20tecnologias%20&fontColor=ffffff&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
-</div>
+## tecnologias
 
 <div align="center">
 
-#### 🎨 frontend
+### frontend
+
 <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vite,tailwind&theme=dark" />
 
-#### ⚙️ backend & banco de dados
-<img src="https://skillicons.dev/icons?i=php,py,nodejs,postgres,supabase,prisma&theme=dark" />
+### backend / banco
 
-#### 🦀 outras linguagens & devops
-<img src="https://skillicons.dev/icons?i=rust,lua,kotlin,cs,java,docker,bash&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nodejs,py,php,postgres,supabase,prisma&theme=dark" />
 
-#### 🧰 ferramentas do dia a dia
-<img src="https://skillicons.dev/icons?i=linux,redhat,vscode,idea,neovim,github,git,figma,ai,ps,discord&theme=dark" />
+### linguagens / ferramentas
 
-</div>
-
-<br/>
-
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=7c3aed&height=44&text=%20estatisticas%20&fontColor=ffffff&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
-</div>
-
-<div align="center">
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=adeondev&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=7c3aed&stroke=4c1d95&sideNums=ffffff&currStreakNum=ffffff&dates=cccccc&sideLabels=ffffff" />
-
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=adeondev&theme=darkpurple&no-frame=true&no-bg=true&column=7&margin-w=5" />
-
-<br/><br/>
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=adeondev&bg_color=0d1117&color=a78bfa&line=7c3aed&point=ffffff&area=true&hide_border=true&custom_title=gráfico%20de%20contribuições" />
+<img src="https://skillicons.dev/icons?i=rust,lua,kotlin,cs,java,docker,bash,git,github,linux,vscode,neovim,figma&theme=dark" />
 
 </div>
 
-<br/>
+---
+
+## atualmente
+
+* trabalhando no **Terra Roxa** e "Liminal."
+* estudando **Rust** e arquitetura
+* usando Windows como sistema principal, Linux como secundário
+
+## links
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=rect&color=7c3aed&height=44&text=%20meu%20setup%20&fontColor=ffffff&fontSize=20&font=Press+Start+2P&fontAlign=50&fontAlignY=58" />
+
+<a href="mailto:gabriellmarques858@gmail.com">
+  <img src="https://img.shields.io/badge/Email-gabriellmarques858%40gmail.com-d14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<a href="https://discord.com/users/uhhdeon">
+  <img src="https://img.shields.io/badge/Discord-uhhdeon-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+</a>
+
+<a href="mailto:gabriel.marques@gazin.com.br">
+  <img src="https://img.shields.io/badge/Teams-gabriel.marques%40gazin.com.br-6264A7?style=for-the-badge&logo=microsoftteams&logoColor=white" />
+</a>
+
+<a href="https://github.com/adeondev">
+  <img src="https://img.shields.io/badge/GitHub-adeondev-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
 </div>
 
-```bash
-╭─ ~ on  fedora 43
-╰─❯ neofetch
-   os         fedora 43 (workstation)
-   wm         gnome / x11
-   terminal   kitty + alacritty + gnome terminal
-   shell      zsh + starship
-   editor     vscode + neovim + antigravity
-   música     youtube_music
-   eye-candy  cava + tty-clock + custom gnome ext
-   we must larp!
-```
 
-<br/>
+---
 
 <div align="center">
 
-```
-░▒▓█  ▓▒░  ▒▓█  ▓▒░  ▒▓█  ▓▒░  ▒▓█  ▓▒░  ▒▓█  ▓▒░  ▒▓█  ▓▒░  ▒▓█  ▓▒░
-```
-
-> _"i use fedora btw"_ — eu, todos os dias
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:4c1d95,100:0d1117&height=120&section=footer" alt="footer" />
+> i use fedora btw
 
 </div>
