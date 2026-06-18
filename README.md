@@ -57,7 +57,11 @@ fato: 2x campeão do agrinho
 
 ### linguagens / ferramentas
 
-<img src="https://skillicons.dev/icons?i=rust,lua,kotlin,cs,java,docker,bash,git,github,linux,vscode,neovim,figma&theme=dark" />
+<img src="https://skillicons.dev/icons?i=cpp,rust,lua,kotlin,cs,java,docker,bash,git,github,linux,vscode,neovim,figma&theme=dark" />
+
+### preferidas
+
+<img src="https://skillicons.dev/icons?i=cpp,cs,py,lua,ts,postgres&theme=dark" />
 
 </div>
 
