@@ -40,6 +40,7 @@ fato: 2x campeão do agrinho
 | **Pryzen**         | projeto pessoal de tecnologia e identidade visual     | Web, design, experimentos             |
 | **K-Room**         | extensão para melhorar a experiência no YouTube Music | JavaScript, Web Audio API             |
 | **Gettin' Engine** | engine/projeto de jogo de ritmo no roblox             | LuaU                                  |
+| **David's Farm**   | continuação do projeto agrinho "david's farm"         | C++, Python                           |
 
 ---
 
